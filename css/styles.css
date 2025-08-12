@@ -1,0 +1,60 @@
+html, body { height: 100%; }
+    body { min-height: 100vh; display: flex; flex-direction: column; background:#0f0f12; color:#e9eaee; }
+    main { flex: 1; }
+
+    /* Header / Navbar */
+    header { background:#15161a; border-bottom:1px solid #262831; }
+    .brand { color:#7dd3fc; font-weight:700; letter-spacing:.3px; text-decoration:none; }
+    .site-nav a { color:#cfd2d8; text-decoration:none; }
+    .site-nav a:hover, .site-nav .active { color:#fff; }
+
+    /* Hero en vivo */
+    .hero-live {
+      background:
+        radial-gradient(100% 100% at 50% 0, #1a1b22 0, #0f0f12 70%),
+        url('https://picsum.photos/1600/600?random=42') center/cover no-repeat;
+      border-bottom:1px solid #262831;
+    }
+    .badge-live { background:#ef4444; color:#fff; font-weight:700; letter-spacing:.06em; }
+
+    /* Carrusel horizontal sin JS (lista semántica) */
+    .row-scroll {
+      display:flex; gap:1rem; overflow-x:auto; padding-bottom:.25rem;
+      scroll-snap-type:x mandatory; list-style:none; margin:0;
+    }
+    .row-scroll::-webkit-scrollbar { height:8px; }
+    .row-scroll::-webkit-scrollbar-thumb { background:#2d2f39; border-radius:4px; }
+
+    .tile {
+      min-width: 220px; max-width: 220px; background:#16171c; border:1px solid #23252e; border-radius:.75rem; scroll-snap-align:start;
+    }
+    .tile figure { margin:0; }
+    .tile img { width:100%; height:124px; object-fit:cover; border-top-left-radius:.75rem; border-top-right-radius:.75rem; }
+    .tile .meta { padding:.75rem; }
+    .chip { background:#1e2028; color:#a9aeb8; border:1px solid #2b2e37; padding:.1rem .5rem; border-radius:999px; font-size:.75rem; }
+
+    .ch-logo { width:44px; height:44px; border-radius:.5rem; object-fit:cover; border:1px solid #2b2e37; background:#0f0f12; }
+    .btn-primary { background:#22d3ee; border-color:#22d3ee; color:#0b0c0f; font-weight:600; }
+    .btn-primary:hover { filter:brightness(.95); }
+    .btn-outline-light { border-color:#464954; color:#e9eaee; }
+    .btn-outline-light:hover { background:#2b2e37; }
+
+    /* Guía / EPG */
+    .guide { background:#0b0c0f; border-top:1px solid #262831; border-bottom:1px solid #262831; }
+    .guide-times { color:#a9aeb8; font-size:.85rem; }
+    .guide-scroll { overflow-x:auto; border-left:1px solid #262831; }
+    .slot {
+      min-width: 220px; height:64px; background:#15161a; border-right:1px solid #262831;
+      display:flex; align-items:center; padding:.5rem; gap:.5rem;
+    }
+    .slot.live { outline:2px solid #ef4444; outline-offset:-2px; }
+    .slot small { color:#9aa0a9; }
+
+    /* Footer */
+    footer { background:#111217; border-top:1px solid #262831; }
+    .link-soft { color:#9aa0a9; text-decoration:none; }
+    .link-soft:hover { color:#e9eaee; text-decoration:underline; }
+
+    /* Accesibilidad visual */
+    .visually-hidden-focusable:active,
+    .visually-hidden-focusable:focus { position:static !important; width:auto; height:auto; margin:0; overflow:visible; clip:auto; }
