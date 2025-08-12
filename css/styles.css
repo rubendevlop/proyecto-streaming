@@ -58,3 +58,129 @@ html, body { height: 100%; }
     /* Accesibilidad visual */
     .visually-hidden-focusable:active,
     .visually-hidden-focusable:focus { position:static !important; width:auto; height:auto; margin:0; overflow:visible; clip:auto; }
+
+
+    /* ===========================
+   Banner Promocional Suscripción
+   Mobile-first | Azul/Violeta | Modo oscuro
+   =========================== */
+
+:root {
+  --promo-grad-a: #6a11cb; /* violeta */
+  --promo-grad-b: #2575fc; /* azul */
+  --promo-text:   #ffffff;
+  --promo-text-2: rgba(255,255,255,.85);
+  --promo-ring:   rgba(255,255,255,.25);
+  --promo-badge-bg: rgba(255,255,255,.15);
+  --promo-shadow: 0 10px 30px rgba(20, 24, 35, .35);
+}
+
+.promo-banner {
+  position: relative;
+  isolation: isolate;
+  color: var(--promo-text);
+  background:
+    radial-gradient(1200px 400px at 20% 10%, rgba(255,255,255,.06), transparent 60%),
+    linear-gradient(90deg, var(--promo-grad-a), var(--promo-grad-b));
+  box-shadow: var(--promo-shadow);
+  overflow: clip;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.promo-banner::before,
+.promo-banner::after {
+  content: "";
+  position: absolute;
+  inset: auto auto -35% -10%;
+  width: 420px; height: 420px;
+  background: radial-gradient(closest-side, rgba(255,255,255,.12), transparent);
+  filter: blur(12px);
+  transform: rotate(15deg);
+  pointer-events: none;
+  opacity: .5;
+}
+.promo-banner::after {
+  inset: -40% -8% auto auto;
+  width: 360px; height: 360px;
+  transform: rotate(-20deg);
+  opacity: .35;
+}
+
+.promo-banner .container {
+  padding-block: .85rem; /* alto compacto en mobile */
+}
+
+.promo-copy .promo-eyebrow {
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-size: .72rem;
+  color: var(--promo-text-2);
+}
+
+.promo-title {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.promo-sub {
+  font-size: .82rem;
+  color: var(--promo-text-2);
+}
+
+.promo-badge {
+  display: inline-grid;
+  place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 12px;
+  background: var(--promo-badge-bg);
+  border: 1px solid var(--promo-ring);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  font-size: 1.05rem;
+}
+
+.promo-cta .btn {
+  --bs-btn-border-width: 0;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .2s ease;
+  will-change: transform;
+}
+.promo-cta .btn:hover { transform: translateY(-1px); }
+
+/* Botón cerrar */
+.promo-close {
+  background: transparent;
+  border: 0;
+  color: var(--promo-text-2);
+  padding: .25rem;
+  line-height: 1;
+  border-radius: .5rem;
+  transition: background-color .15s ease, color .15s ease, transform .15s ease;
+}
+.promo-close:hover {
+  background: rgba(255,255,255,.12);
+  color: var(--promo-text);
+  transform: rotate(90deg);
+}
+
+/* ====== Responsivo ====== */
+@media (min-width: 576px) {
+  .promo-title { font-size: 1.1rem; }
+}
+
+@media (min-width: 768px) {
+  .promo-banner .container { padding-block: 1rem; }
+  .promo-title { font-size: 1.2rem; }
+  .promo-sub   { font-size: .9rem; }
+  .promo-badge { width: 44px; height: 44px; border-radius: 14px; }
+}
+
+@media (min-width: 992px) {
+  .promo-banner .container { padding-block: 1.15rem; }
+  .promo-title { font-size: 1.25rem; }
+}
+
+/* Espaciado con header fijo opcional */
+body.has-fixed-lg + .promo-banner,
+.has-fixed-lg ~ #promo-suscripcion {
+  /* si usás header fijo, podés manejar el offset desde JS si querés */
+}
