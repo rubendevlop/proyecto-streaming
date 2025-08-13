@@ -915,7 +915,7 @@
         return;
       }
     
-      const closeBtn = banner.querySelector('.promo-close');
+      const closeBtn = banner.querySelector('.proase');
       closeBtn?.addEventListener('click', () => {
         const until = Date.now() + EXPIRE_MS;
         localStorage.setItem(KEY, JSON.stringify({ until }));
