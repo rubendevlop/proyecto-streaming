@@ -29,116 +29,156 @@
       <div class="carousel-wrap">
         <!-- Tira horizontal (UNA SOLA FILA) -->
         <section
-          class="snap-strip"
-          aria-label="Carrusel de imágenes"
-          aria-roledescription="carousel"
-        >
-          <!-- ====== ORIGINALES (S1..S10) ====== -->
-          <article class="snap-item" id="s1" role="group" aria-label="1 de 12">
-            <figure class="snap-card">
+        class="carousel-strip d-flex flex-nowrap overflow-auto gap-3 pb-3"
+        aria-label="Carrusel de imágenes"
+        aria-roledescription="carousel"
+      >
+        <article class="flex-shrink-0" id="s1" role="group" aria-label="1 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQmKhTAgWzNs_Net6PUGHjDDEnmKuBnETQKQ&s"
-                alt="ED, EED Y EDDY"
+                alt="Ed, Edd y Eddy"
                 data-bs-toggle="modal" data-bs-target="#modal-s1">
-              <figcaption class="caption">Ed, Edd y Eddy</figcaption>
-            </figure>
-          </article>
-  
-          <article class="snap-item" id="s2" role="group" aria-label="2 de 12">
-            <figure class="snap-card">
+            </div>
+            <div class="card-body py-2">
+              <p class="card-title mb-0">Ed, Edd y Eddy</p>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s2" role="group" aria-label="2 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/36783270-f344-487e-b98b-36337db5dea0/7bc9f3c7e2eeb78072f7c3c9c6ed02dc92db653f.jpg?host=wbd-images.prod-vod.h264.io&partner=beamcom"
-                alt="Mar"
+                alt="Johnny Bravo"
                 data-bs-toggle="modal" data-bs-target="#modal-s2">
-              <figcaption class="caption">Johnny Bravo</figcaption>
-            </figure>
-          </article>
-  
-          <article class="snap-item" id="s3" role="group" aria-label="3 de 12">
-            <figure class="snap-card">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">Johnny Bravo</h3>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s3" role="group" aria-label="3 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://m.media-amazon.com/images/S/pv-target-images/8844d365b1b8750c2b03b76bddc14c444d7d7b11af23251c83b7e6f1012e5b16.jpg"
-                alt="Ciudad"
+                alt="La Vaca y el Pollito"
                 data-bs-toggle="modal" data-bs-target="#modal-s3">
-              <figcaption class="caption">LA VACA Y EL POLLITO</figcaption>
-            </figure>
-          </article>
-  
-          <article class="snap-item" id="s4" role="group" aria-label="4 de 12">
-            <figure class="snap-card">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">La Vaca y el Pollito</h3>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s4" role="group" aria-label="4 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
-                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop"
-                alt="Bosque"
+                src="https://i.pinimg.com/736x/d4/b0/dc/d4b0dc2cb537073cb211da60e286d0da.jpg"
+                alt="CatDog"
                 data-bs-toggle="modal" data-bs-target="#modal-s4">
-              <figcaption class="caption">Bosque</figcaption>
-            </figure>
-          </article>
-  
-          <article class="snap-item" id="s5" role="group" aria-label="5 de 12">
-            <figure class="snap-card">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">CatDog</h3>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s5" role="group" aria-label="5 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://images.unsplash.com/photo-1435224654926-ecc9f7fa028c?q=80&w=1200&auto=format&fit=crop"
                 alt="Desierto"
                 data-bs-toggle="modal" data-bs-target="#modal-s5">
-              <figcaption class="caption">Desierto</figcaption>
-            </figure>
-          </article>
-  
-          <article class="snap-item" id="s6" role="group" aria-label="6 de 12">
-            <figure class="snap-card">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">Desierto</h3>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s6" role="group" aria-label="6 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=1200&auto=format&fit=crop"
                 alt="Arquitectura"
                 data-bs-toggle="modal" data-bs-target="#modal-s6">
-              <figcaption class="caption">Arquitectura</figcaption>
-            </figure>
-          </article>
-          <article class="snap-item" id="s7" role="group" aria-label="6 de 12">
-            <figure class="snap-card">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">Arquitectura</h3>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s7" role="group" aria-label="7 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=1200&auto=format&fit=crop"
                 alt="Arquitectura"
-                data-bs-toggle="modal" data-bs-target="#modal-s6">
-              <figcaption class="caption">Arquitectura</figcaption>
-            </figure>
-          </article>
-          <article class="snap-item" id="s8" role="group" aria-label="6 de 12">
-            <figure class="snap-card">
+                data-bs-toggle="modal" data-bs-target="#modal-s7">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">Arquitectura</h3>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s8" role="group" aria-label="8 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=1200&auto=format&fit=crop"
                 alt="Arquitectura"
-                data-bs-toggle="modal" data-bs-target="#modal-s6">
-              <figcaption class="caption">Arquitectura</figcaption>
-            </figure>
-          </article>
-          <article class="snap-item" id="s9" role="group" aria-label="6 de 12">
-            <figure class="snap-card">
+                data-bs-toggle="modal" data-bs-target="#modal-s8">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">Arquitectura</h3>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s9" role="group" aria-label="9 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=1200&auto=format&fit=crop"
                 alt="Arquitectura"
-                data-bs-toggle="modal" data-bs-target="#modal-s6">
-              <figcaption class="caption">Arquitectura</figcaption>
-            </figure>
-          </article>
-  
-          <article class="snap-item" id="s10" role="group" aria-label="6 de 12">
-            <figure class="snap-card">
+                data-bs-toggle="modal" data-bs-target="#modal-s9">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">Arquitectura</h3>
+            </div>
+          </div>
+        </article>
+      
+        <article class="flex-shrink-0" id="s10" role="group" aria-label="10 de 12">
+          <div class="card carousel-card h-100 shadow-sm rounded-3 border-0">
+            <div class="ratio ratio-4x3">
               <img
                 src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=1200&auto=format&fit=crop"
                 alt="Arquitectura"
-                data-bs-toggle="modal" data-bs-target="#modal-s6">
-              <figcaption class="caption">Arquitectura</figcaption>
-            </figure>
-          </article>
-  
-     
-        </section>
-  
+                data-bs-toggle="modal" data-bs-target="#modal-s10">
+            </div>
+            <div class="card-body py-2">
+              <h3 class="card-title h6 mb-0">Arquitectura</h3>
+            </div>
+          </div>
+        </article>
+      </section>
+      
         <!-- Controles únicos de contenedor -->
         <nav class="controls" aria-label="Controles del carrusel">
           <!-- Pares de flechas para cada estado (se muestran/ocultan con :has) -->
           <div class="ctrl-pair s1">
-            <a class="arrow prev" href="#s6"  aria-label="Ir al elemento anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
+            <a class="arrow prev" href="#s10"  aria-label="Ir al elemento anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
             <a class="arrow next" href="#s2"  aria-label="Ir al elemento siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
           </div>
   
@@ -165,35 +205,158 @@
           <div class="ctrl-pair s6">
             <a class="arrow prev" href="#s5"  aria-label="Ir al elemento anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
             <!-- Salta a la primera copia para simular infinito -->
+            <a class="arrow next" href="#s7" aria-label="Ir al elemento siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="ctrl-pair s7">
+            <a class="arrow prev" href="#s6"  aria-label="Ir al elemento anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
+            <!-- Salta a la primera copia para simular infinito -->
+            <a class="arrow next" href="#s8" aria-label="Ir al elemento siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="ctrl-pair s8">
+            <a class="arrow prev" href="#s7"  aria-label="Ir al elemento anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
+           
+            <a class="arrow next" href="#s9" aria-label="Ir al elemento siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="ctrl-pair s9">
+            <a class="arrow prev" href="#s8"  aria-label="Ir al elemento anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
+            
+            <a class="arrow next" href="#s10" aria-label="Ir al elemento siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="ctrl-pair s10">
+            <a class="arrow prev" href="#s9"  aria-label="Ir al elemento anterior"><i class="bi bi-chevron-left" aria-hidden="true"></i></a>
+            
             <a class="arrow next" href="#s1" aria-label="Ir al elemento siguiente"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
           </div>
         </nav>
   
-         
-  
       <!-- ===========================
            MODALES (uno por imagen)
            =========================== -->
-  
-      <!-- Originals -->
       <div class="modal fade" id="modal-s1" tabindex="-1" aria-labelledby="modal-s1-label" aria-describedby="modal-s1-desc" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
-          <div class="modal-content">
-            <div class="modal-header d-flex justify-content-between align-items-center">
-              <h2 id="modal-s1-label" class="modal-title h5">ED, EDD Y EDDY</h2>
-              <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar" title="Cerrar">
-                <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
-              </button>
+        <div class="modal-dialog modal-dialog-centered modal-75w" role="dialog">
+        <div class="modal-content">
+          <div class="modal-header d-flex justify-content-between align-items-center border-0">
+            <h2 id="modal-s1-label" class="modal-title h5 mb-0">ED, EDD Y EDDY</h2>
+            <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar">
+              <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
+            </button>
+          </div>
+          
+          <div class="modal-body p-0" id="modal-s1-desc">
+            <!-- Video / tráiler -->
+            <div class="ratio ratio-16x9 overflow-hidden">
+              <iframe
+                class="youtube d-block border-0"
+                src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                title="Video"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
-            <div class="modal-body" id="modal-s1-desc">
-              <figure>
-                <img class="modal-img rounded mb-3" src="https://tierragamer.com/wp-content/uploads/2023/08/ed-edd-y-eddy-portada.webp" alt="Montañas">
-                <figcaption class="mb-0 text-secondary">Paisaje de montañas.</figcaption>
-              </figure>
+          
+            <!-- Temporadas (izq) / Episodios (der) -->
+            <div class="container py-4">
+              <div class="row g-4">
+                <!-- IZQUIERDA: Temporadas (List group con tabs) -->
+                <div class="col-md-4 col-lg-3">
+                  <h3 class="h6 mb-3">Temporadas</h3>
+                  <div class="list-group" id="season-list" role="tablist">
+                    <button
+                      class="list-group-item list-group-item-action active"
+                      id="season-1-tab"
+                      data-bs-toggle="list"
+                      data-bs-target="#season-1-pane"
+                      type="button" role="tab"
+                      aria-controls="season-1-pane"
+                      aria-selected="true">
+                      Temporada 1
+                    </button>
+                    <button
+                      class="list-group-item list-group-item-action"
+                      id="season-2-tab"
+                      data-bs-toggle="list"
+                      data-bs-target="#season-2-pane"
+                      type="button" role="tab"
+                      aria-controls="season-2-pane"
+                      aria-selected="false">
+                      Temporada 2
+                    </button>
+                    <button
+                      class="list-group-item list-group-item-action"
+                      id="season-3-tab"
+                      data-bs-toggle="list"
+                      data-bs-target="#season-3-pane"
+                      type="button" role="tab"
+                      aria-controls="season-3-pane"
+                      aria-selected="false">
+                      Temporada 3
+                    </button>
+                  </div>
+                </div>
+          
+                <!-- DERECHA: Episodios (Tab content) -->
+                <div class="col-md-8 col-lg-9">
+                  <h3 class="h6 mb-3">Episodios</h3>
+          
+                  <div class="tab-content" id="season-tabContent">
+                    <!-- Temporada 1 -->
+                    <div
+                      class="tab-pane fade show active"
+                      id="season-1-pane"
+                      role="tabpanel"
+                      aria-labelledby="season-1-tab"
+                      tabindex="0">
+                      <ol class="list-group">
+                        <li class="list-group-item">Episodio 1: “Y un sombrío día nació”</li>
+                        <li class="list-group-item">Episodio 2: “El sombrío encanto de la soledad”</li>
+                        <li class="list-group-item">Episodio 3: “Amistad, sombrío tesoro”</li>
+                        <li class="list-group-item">Episodio 4: “Una sombría noche de baile”</li>
+                        <li class="list-group-item">Episodio 5: “Cosecharás tu sombría siembra”</li>
+                      </ol>
+                    </div>
+          
+                    <!-- Temporada 2 -->
+                    <div
+                      class="tab-pane fade"
+                      id="season-2-pane"
+                      role="tabpanel"
+                      aria-labelledby="season-2-tab"
+                      tabindex="0">
+                      <ol class="list-group">
+                        <li class="list-group-item">Episodio 1: “Título S2E1”</li>
+                        <li class="list-group-item">Episodio 2: “Título S2E2”</li>
+                        <li class="list-group-item">Episodio 3: “Título S2E3”</li>
+                        <li class="list-group-item">Episodio 4: “Título S2E4”</li>
+                        <li class="list-group-item">Episodio 5: “Título S2E5”</li>
+                      </ol>
+                    </div>
+          
+                    <!-- Temporada 3 -->
+                    <div
+                      class="tab-pane fade"
+                      id="season-3-pane"
+                      role="tabpanel"
+                      aria-labelledby="season-3-tab"
+                      tabindex="0">
+                      <ol class="list-group">
+                        <li class="list-group-item">Episodio 1: “Título S3E1”</li>
+                        <li class="list-group-item">Episodio 2: “Título S3E2”</li>
+                        <li class="list-group-item">Episodio 3: “Título S3E3”</li>
+                        <li class="list-group-item">Episodio 4: “Título S3E4”</li>
+                        <li class="list-group-item">Episodio 5: “Título S3E5”</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Derecha -->
+              </div>
             </div>
           </div>
+          
+        </div>
         </div>
       </div>
+        
   
       <div class="modal fade" id="modal-s2" tabindex="-1" aria-labelledby="modal-s2-label" aria-describedby="modal-s2-desc" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
@@ -205,8 +368,17 @@
               </button>
             </div>
             <div class="modal-body" id="modal-s2-desc">
-              <figure>
-                <img class="modal-img rounded mb-3" src="https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/36783270-f344-487e-b98b-36337db5dea0/7bc9f3c7e2eeb78072f7c3c9c6ed02dc92db653f.jpg?host=wbd-images.prod-vod.h264.io&partner=beamcom" alt="Mar">
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
                 <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
               </figure>
             </div>
@@ -224,9 +396,18 @@
               </button>
             </div>
             <div class="modal-body" id="modal-s3-desc">
-              <figure>
-                <img class="modal-img rounded mb-3" src="https://m.media-amazon.com/images/S/pv-target-images/8844d365b1b8750c2b03b76bddc14c444d7d7b11af23251c83b7e6f1012e5b16.jpg" alt="Ciudad">
-                <figcaption class="mb-0 text-secondary">Escena urbana.</figcaption>
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
+                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
               </figure>
             </div>
           </div>
@@ -237,15 +418,24 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
           <div class="modal-content">
             <div class="modal-header d-flex justify-content-between align-items-center">
-              <h2 id="modal-s4-label" class="modal-title h5">Bosque</h2>
+              <h2 id="modal-s4-label" class="modal-title h5">CatDog</h2>
               <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar" title="Cerrar">
                 <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
               </button>
             </div>
             <div class="modal-body" id="modal-s4-desc">
-              <figure>
-                <img class="modal-img rounded mb-3" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop" alt="Bosque">
-                <figcaption class="mb-0 text-secondary">Sendero en el bosque.</figcaption>
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
+                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
               </figure>
             </div>
           </div>
@@ -262,9 +452,18 @@
               </button>
             </div>
             <div class="modal-body" id="modal-s5-desc">
-              <figure>
-                <img class="modal-img rounded mb-3" src="https://images.unsplash.com/photo-1435224654926-ecc9f7fa028c?q=80&w=1200&auto=format&fit=crop" alt="Desierto">
-                <figcaption class="mb-0 text-secondary">Dunas del desierto.</figcaption>
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
+                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
               </figure>
             </div>
           </div>
@@ -281,14 +480,138 @@
               </button>
             </div>
             <div class="modal-body" id="modal-s6-desc">
-              <figure>
-                <img class="modal-img rounded mb-3" src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?q=80&w=1200&auto=format&fit=crop" alt="Arquitectura">
-                <figcaption class="mb-0 text-secondary">Detalle arquitectónico.</figcaption>
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
+                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
               </figure>
             </div>
           </div>
         </div>
       </div>
+
+
+      <div class="modal fade" id="modal-s7" tabindex="-1" aria-labelledby="modal-s6-label" aria-describedby="modal-s6-desc" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+              <h2 id="modal-s6-label" class="modal-title h5">Arquitectura</h2>
+              <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar" title="Cerrar">
+                <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-s6-desc">
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
+                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-s8" tabindex="-1" aria-labelledby="modal-s6-label" aria-describedby="modal-s6-desc" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+              <h2 id="modal-s6-label" class="modal-title h5">Arquitectura</h2>
+              <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar" title="Cerrar">
+                <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-s6-desc">
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
+                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-s9" tabindex="-1" aria-labelledby="modal-s6-label" aria-describedby="modal-s6-desc" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+              <h2 id="modal-s6-label" class="modal-title h5">Arquitectura</h2>
+              <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar" title="Cerrar">
+                <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-s6-desc">
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
+                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modal-s10" tabindex="-1" aria-labelledby="modal-s6-label" aria-describedby="modal-s6-desc" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
+          <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+              <h2 id="modal-s6-label" class="modal-title h5">Arquitectura</h2>
+              <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar" title="Cerrar">
+                <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="modal-body" id="modal-s6-desc">
+              <figure class="div-figure">
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                    class="border-0 w-100 h-100">
+                  </iframe>
+                </div>
+                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
     </div>
   </main>
 
