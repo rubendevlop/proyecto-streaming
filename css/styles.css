@@ -69,3 +69,37 @@ body {
 .subtitulocontacto{
   color: var(--text);
 }
+.pruebafooter{
+ background-color: var(--bg) ;
+}
+.contenedorfoot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 1rem;
+      }
+      
+      .footerimg {
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+      }
+      
+      .titulosfoot {
+        margin: 0;
+        color: var(--primary);
+      }
+      
+      .footerlinks {
+        color: var(--cloud-50);
+        text-decoration: none;
+      }
+      
+      .footerlinks:hover {
+        color: var(--primary);
+      }
+
+.titulosfoot{
+  color:var(--primary) ;
+}

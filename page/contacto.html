@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Suricata TV</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/styles.css">
   </head>
   <body>
@@ -25,9 +26,18 @@
             <li class="nav-item">
               <a class="nav-link active" href="#">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Categorías</a>
-            </li>
+            <!-- Categorías con submenú -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+              <li><a class="dropdown-item" href="#">Ciencia Ficción</a></li>
+              <li><a class="dropdown-item" href="#">Comedia</a></li>
+              <li><a class="dropdown-item" href="#">Familiar</a></li>
+              <li><a class="dropdown-item" href="#">Acción / Superhéroes</a></li>
+            </ul>
+          </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Suscripciones</a>
             </li>
@@ -58,12 +68,12 @@
                 <form>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" required>
                     </div>
                     
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="tu@email.com">
+                        <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
                     </div>
                     
                     <div class="mb-3">
@@ -78,7 +88,7 @@
                     
                     <div class="mb-3">
                         <label for="motivo" class="form-label">Motivo</label>
-                        <textarea class="form-control" id="motivo" rows="4" placeholder="Describe tu consulta..."></textarea>
+                        <textarea class="form-control" id="motivo" rows="4" placeholder="Describe tu consulta..." required></textarea>
                     </div>
                     
                     <div class="form-check mb-3">
@@ -89,7 +99,7 @@
                     </div>
                     
                     <div class="form-check mb-4">
-                        <input class="form-check-input" type="checkbox" id="terminos">
+                        <input class="form-check-input" type="checkbox" id="terminos" required>
                         <label class="form-check-label" for="terminos">
                             Acepto los términos
                         </label>
@@ -113,12 +123,12 @@
                         
                         <div class="d-flex align-items-center mb-3">
                             <i class="bi bi-envelope me-3"></i>
-                            <span>soporte@suricatatv.com</span>
+                            <span>soportesuritv@gmail.com</span>
                         </div>
                         
                         <div class="d-flex align-items-center mb-3">
                             <i class="bi bi-telephone me-3"></i>
-                            <span>+54 381</span>
+                            <span>+54 11 1234-5678</span>
                         </div>
                         
                         <div class="d-flex align-items-center mb-3">
@@ -127,10 +137,10 @@
                         </div>
                         
                         <div class="mt-3">
-                            <a href="#" class="text-decoration-none me-3"><i class="bi bi-envelope fs-5"></i></a>
+                         <a href="#" class="text-decoration-none me-3"><i class="bi bi-envelope fs-5"></i></a>
+                            <a href="#" class="text-decoration-none me-3"><i class="bi bi-instagram fs-5"></i></a>
+                            <a href="#" class="text-decoration-none me-3"><i class="bi bi-youtube fs-5"></i></a>
                             <a href="#" class="text-decoration-none me-3"><i class="bi bi-facebook fs-5"></i></a>
-                            <a href="#" class="text-decoration-none me-3"><i class="bi bi-twitter fs-5"></i></a>
-                            <a href="#" class="text-decoration-none"><i class="bi bi-instagram fs-5"></i></a>
                         </div>
                     </div>
                 </div>
@@ -140,26 +150,95 @@
                     <div class="card-body">
                         <h5 class="card-title">Preguntas frecuentes</h5>
                         
-                        <div class="d-flex justify-content-between align-items-center p-2 border rounded mb-2">
-                            <span>¿Cómo puedo acceder al contenido?</span>
-                            <i class="bi bi-plus"></i>
-                        </div>
-                        
-                        <div class="d-flex justify-content-between align-items-center p-2 border rounded mb-2">
-                            <span>¿El servicio es completamente gratuito?</span>
-                            <i class="bi bi-plus"></i>
-                        </div>
-                        
-                        <div class="d-flex justify-content-between align-items-center p-2 border rounded">
-                            <span>¿En qué dispositivos puedo ver el contenido?</span>
-                            <i class="bi bi-plus"></i>
-                        </div>
-                    </div>
-                </div>
+                   <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        ¿Cómo puedo acceder al contenido?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+       
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        ¿El servicio es completamente gratuito?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+       ¿En qué dispositivos puedo ver el contenido?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+      
+      </div>
+    </div>
+  </div>
+</div>
      </div>
     </section>
    </main>
-   <footer></footer>
+    <footer role="contentinfo" class="pt-5 pruebafooter">
+    <section class="container">
+     <div class="row gy-4" aria-labelledby="ft-brand">
+     <div class="col-12 col-lg-4 text-center py-0"> 
+      <div class="contenedorfoot">
+        <img src="../assets/lotosuricatafoot.png" alt="suricata TV" class="footerimg">
+        <h3 class="h3 titulosfoot">Suricata TV</h3>
+      </div>
+      <p class="text-secondary small mb-2">Canales lineales gratuitos y clásicos bajo demanda.</p>
+          <nav aria-label="Redes sociales">
+            <ul class="list-inline m-0">
+              <li class="list-inline-item"><a href="#" class="link-soft footerlinks" data-bs-toggle="modal" data-bs-target="#modalSocial"><i class="bi bi-envelope fs-5"></i><span class="visually-hidden">Gmail</span></a></li>
+              <li class="list-inline-item"><a href="#" class="link-soft footerlinks" data-bs-toggle="modal" data-bs-target="#modalSocial"><i class="bi bi-instagram fs-5"></i><span class="visually-hidden">Instagram</span></a></li>
+              <li class="list-inline-item"><a href="#" class="link-soft footerlinks" data-bs-toggle="modal" data-bs-target="#modalSocial"><i class="bi bi-youtube fs-5"></i><span class="visually-hidden">YouTube</span></a></li>
+              <li class="list-inline-item"><a href="#" class="link-soft footerlinks" data-bs-toggle="modal" data-bs-target="#modalSocial"><i class="bi bi-facebook fs-5"></i><span class="visually-hidden">Facebook</span></a></li>
+            </ul>
+          </nav>
+     </div>
+     <div class="col-6 col-lg-4 text-center" aria-labelledby="ft-explorar">
+        <nav>
+          <h3 id="ft-explorar" class="h6 titulosfoot">Explorar</h3>
+          <ul class="list-unstyled">
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalNav">En vivo</a></li>
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalNav">Películas</a></li>
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalNav">Series</a></li>
+          </ul>
+        </nav>
+     </div>
+     <div class="col-6 col-lg-4 text-center" aria-labelledby="ft-soporte">
+      <nav>
+          <h3 id="ft-soporte" class="h6 titulosfoot">Soporte</h3>
+          <ul class="list-unstyled">
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalAbout">Acerca</a></li>
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalContact">Contacto</a></li>
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalTerms">Términos</a></li>
+          </ul>
+        </nav>
+     </div>
+    </div>
+    </section>
+    <section class="container">
+     <div class="row">
+      <div class="col-12 text-center">
+       <p class="text-white">&copy; Suricata TV - 2025 Todos los derechos reservados.</p>
+      </div>
+     </div>
+    </section>
+   </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
   </body>
 </html>
