@@ -1,57 +1,86 @@
-:root{
-  /* Core – Coraje /
-  --courage-100:#F7D8E9;
-  --courage-300:#F19FCD;
-  --courage-500:#E36CB4; / Primary /
-  --courage-600:#CC579E;
-  --courage-700:#B94C8E;
+:root {
+  /* Core – Coraje / */
+  --courage-100: #f7d8e9;
+  --courage-300: #f19fcd;
+  /*  Primary  */
+  --courage-500: #e36cb4;
+  --courage-600: #cc579e;
+  --courage-700: #b94c8e;
 
-  / Neutros /
-  --ink-900:#0F0C10;
-  --ink-700:#2B2330;
-  --ink-400:#6E6171;
-  --cloud-50:#F7F5F8;
+  /*  Neutros  */
+  --ink-900: #0f0c10;
+  --ink-700: #2b2330;
+  --ink-400: #6e6171;
+  --cloud-50: #f7f5f8;
 
-  / Accentos /
-  --muriel-yellow:#F2D24B;
-  --nowhere-green:#8EA85C;
-  --barn-brown:#7E3F2F;
-  --night-purple:#3D2A4E;
-  --ghost-teal:#79BFC5;
+  /*  Accentos  */
+  --muriel-yellow: #f2d24b;
+  --nowhere-green: #8ea85c;
+  --barn-brown: #7e3f2f;
+  --night-purple: #3d2a4e;
+  --ghost-teal: #79bfc5;
 
-  / Tokens de UI /
+  /* Tokens de UI  */
   --bg: var(--ink-900);
-  --surface: #16131A;
-  --text: #EDEAF0;
-  --muted: #A89CB0;
+  --surface: #16131a;
+  --text: #edeaf0;
+  --muted: #a89cb0;
   --primary: var(--courage-500);
-  --primary-contrast: #160E15; / texto sobre rosa claro */
-  --border: rgba(255,255,255,.08);
+  /*  texto sobre rosa claro */
+  --primary-contrast: #160e15;
+  --border: rgba(255, 255, 255, 0.08);
 }
 
-
+body{
+  background-color: #2b2330;
+}
 /* carousel  */
-
-/* .carousel-principal {
-  height: 90vh;
+.carousel-principal {
+ border-radius: 20px;
 }
-
-#carouselExample {
-  height: 90vh;
-}  
 
 .carousel-item img {
   width: 100%;
-  /* height: 90vh; */
   object-fit: cover;
 }
 
-.carousel-control-next-icon, 
+.carousel-control-next-icon,
 .carousel-control-prev-icon {
-  background-color: var(--border-200);  
+  background-color: #f19fcd;
   border-radius: 50%;
   height: 50px;
   width: 50px;
   padding: 15px;
-  background-size: 60% 60%; 
+  background-size: 60% 60%;
+}
+
+
+/* boton personalizado  */
+
+.btn-suricata {
+  background-color: #e6007e;   
+  color: #fff;                
+  padding: 0.75rem 1.5rem;    
+  border: none;                
+  border-radius: 0.5rem;       
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-suricata:hover {
+  background-color: #b30061;   
+  transform: scale(1.05);     
+}
+
+.btn-suricata2{
+  background-color: var(--night-purple);   
+  color: #fff;                 
+  padding: 0.75rem 1.5rem;     /
+  border: none;                
+  border-radius: 0.5rem;       
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-suricata2:hover {
+  background-color: var(--ink-700);   
+  transform: scale(1.05);      
 }
