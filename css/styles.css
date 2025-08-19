@@ -54,14 +54,11 @@
     --bs-link-hover-color: var(--text-100);
   }
 
-.pruebamain{
+  .pruebamain{
  height: 65vh;
  background-color: darkslategray;
 }
 .pruebafooter{
- background-color: black;
-}
-footer{
  background-color: var(--bg-950);
 }
 .footerlinks{
