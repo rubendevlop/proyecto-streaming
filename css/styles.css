@@ -1,20 +1,4 @@
-:root {
-  /* Fondo y superficies */
-  --bg: #0F0C10;        /* Fondo principal (negro violeta) */
-  --surface: #16131A;   /* Secciones y tarjetas */
 
-  /* Texto */
-  --text: #EDEAF0;      /* Texto principal */
-  --muted: #A89CB0;     /* Texto secundario */
-
-  /* Colores de marca */
-  --primary: #E36CB4;   /* Botones y acentos rosas */
-  --primary-hover: #CC579E; /* Hover de botones */
-  --logo: #F2D24B;      /* Amarillo del logo Suricata */
-
-  /* Bordes */
-  --border: rgba(255,255,255,0.08);
-}
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -69,6 +53,78 @@ body {
 .subtitulocontacto{
   color: var(--text);
 }
+.backgroundsecciones{
+  background-color: var(--surface);
+}
+.iconosinfo{
+  color: var(--cloud-50);
+}
+.textoinfo{
+  color: var(--text);
+}
+ main {
+        padding-top: 100px;
+      }
+
+      /* Sección de encabezado del contacto */
+      .contact-header {
+        margin-bottom: 3rem;
+      }
+
+      .titulocontacto {
+        margin-bottom: 1rem;
+      }
+
+      /* Secciones con gaps */
+      .backgroundsecciones {
+        margin-bottom: 2rem; /* Gap entre secciones */
+      }
+
+      /* Formulario */
+      .form-section {
+        margin-bottom: 3rem; /* Gap específico para la sección del formulario */
+      }
+
+      /* Sección de información */
+      .info-section {
+        margin-bottom: 3rem; /* Gap específico para la sección de información */
+      }
+
+      .card {
+        margin-bottom: 2rem; /* Gap entre cards */
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        margin-bottom: 3rem; /* Gap específico para la sección FAQ */
+      }
+
+      .accordion-item {
+        margin-bottom: 1rem;
+      }
+
+     .backgroundacordion{
+      background-color: var(--surface);
+      color: var(--primary-hover);
+     }
+     .botonacordion{
+      background-color: var(--bg);
+      color: var(--primary);
+     }
+     .textacordion{
+      color: var(--accent-teal);
+     }
+      /* Responsividad */
+      @media (max-width: 768px) {
+        .backgroundsecciones {
+          margin-bottom: 1.5rem; /* Gap reducido en móviles */
+        }
+
+        .form-section,
+        .info-section,
+        .faq-section {
+          margin-bottom: 2rem; /* Gaps reducidos en móviles */
+        }
 .pruebafooter{
  background-color: var(--bg) ;
 }
@@ -79,12 +135,32 @@ body {
         gap: 15px;
         margin-bottom: 1rem;
       }
-      
-      .footerimg {
-        width: 40px;
-        height: 40px;
-        flex-shrink: 0;
-      }
+
+.titulosfoot {
+  margin: 0; 
+  font-size: 1.5rem; 
+  line-height: 1.2;
+  color: #ffffff; 
+}
+.footerimg{
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .footerimg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .titulosfoot {
+    font-size: 1.3rem;
+  }
+  
+  .contenedorfoot {
+    gap: 10px;
+  }
+}
       
       .titulosfoot {
         margin: 0;
@@ -99,7 +175,4 @@ body {
       .footerlinks:hover {
         color: var(--primary);
       }
-
-.titulosfoot{
-  color:var(--primary) ;
 }
