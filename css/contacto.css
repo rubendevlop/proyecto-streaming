@@ -149,8 +149,7 @@ body {
 
 @media (max-width: 768px) {
   .footerimg {
-    width: 50px;
-    height: 50px;
+    width: 15%;
   }
   
   .titulosfoot {
@@ -167,12 +166,17 @@ body {
         color: var(--primary);
       }
       
-      .footerlinks {
-        color: var(--cloud-50);
-        text-decoration: none;
-      }
+   .footerlinks{
+    text-decoration: none;
+    color: var(--text);
+   }
       
       .footerlinks:hover {
         color: var(--primary);
       }
+}
+@media (max-width: 576px){
+  .footerimg{
+    width: 30%;
+  }
 }
