@@ -1,125 +1,105 @@
-/* ====== Reset mínimo / layout base ====== */
+/* ====== Base ====== */
+.container{ height:auto; }
 
-
-
-
-
-.container{
-  height: auto;
+/* ====== Carrusel ====== */
+.carousel-wrap{
+  position:relative;
+  container-type:inline-size;
 }
 
-/* ====== Contenedor del carrusel ====== */
-.carousel-wrap {
-  position: relative;
-  container-type: inline-size; /* permite consultas futuras si se quiere */
+/* Tira horizontal (mobile-first) */
+.carousel-strip{
+  display:flex;
+  flex-wrap:nowrap;
+  gap:.75rem;
+  padding:.5rem .5rem 2.5rem;       /* espacio para flechas */
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-behavior:smooth;
+  -ms-overflow-style:none;           /* IE/Edge antiguo */
+  scrollbar-width:none;              /* Firefox */
+}
+.carousel-strip::-webkit-scrollbar{  /* Chrome/Safari/Edge */
+  display:none;
 }
 
-.row {
-  overflow-x: auto !important;
-  overflow-y: hidden !important;
-  padding: .5rem .5rem 2.5rem; /* espacio para los controles */
-  -ms-overflow-style: none !important;  /* IE/Edge antiguo */
-  scrollbar-width: none !important; 
+/* Card del carrusel (scoped, no global) */
+.carousel-card{
+  width:clamp(200px, 68vw, 260px);
+  min-width:clamp(200px, 68vw, 260px);
+  border-radius:10px;
+  border:1px solid #ddd;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+  transition:transform .2s ease-in-out;
 }
-.carousel-strip {
-  scroll-behavior: smooth;
-}
-.carousel-strip.overflow-auto {
-  -ms-overflow-style: none;   /* IE/Edge antiguo */
-  scrollbar-width: none;      /* Firefox */
-}
-.carousel-strip.overflow-auto::-webkit-scrollbar {
-  display: none;              /* Chrome/Safari/Edge */
-}
-.card{
-  height: 200px;
-  margin: 0;
-}
-.carousel-card {
-  width: 260px;
-  min-width: 220px;
-  height: 200px;      /* evita que se achique demasiado en pantallas chicas */
-  border-radius: 10px;
-  margin: 0 1rem;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
-  position: relative;
-  overflow-x: hidden;
-  transition: transform .2s ease-in-out;
+.carousel-card:hover{ transform:translateY(-2px); }
+
+/* Imagen dentro de .ratio (scoped) */
+.carousel-card .ratio > img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
-.card .ratio > img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  display: block;
+/* Título compacto */
+.carousel-card .card-body{ padding:.5rem .75rem; }
+
+/* ====== Flechas (se mantienen) ====== */
+.controls{
+  pointer-events:none;
+  position:absolute;
+  inset:0;
+  z-index:3; /* asegura que queden por encima del carrusel */
 }
-.card:hover { transform: translateY(-2px); }
+.ctrl-pair{ display:none; pointer-events:none; }
 
-.card img {
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
+.arrow{
+  pointer-events:auto;
+  position:absolute;
+  top:50%;
+  translate:0 -50%;
+  display:grid;
+  place-items:center;
+  width:42px; height:42px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:1.4rem;
+  border:1px solid transparent;
+  transition:transform .5s ease, box-shadow .5s ease, opacity .5s ease;
 }
+.arrow.prev{ left:.25rem; }
+.arrow.next{ right:.25rem; }
+.arrow:active{ transform:translateY(0) scale(.98); }
+.arrow i{ line-height:1; }
 
+/* ====== Modal (vídeo) ====== */
+.modal-dialog{ max-width:min(1000px, 96vw); }
 
+/* Si usas el figure con altura completa, suaviza en móviles */
+.div-figure{ position:relative; width:100%; height:100dvh; overflow:hidden; border-radius:15px; }
+.youtube{ display:block; transform:translateY(-1px); height:calc(100% + 2px); }
 
+/* ====== Breakpoints ====== */
 
-/* ====== Controles (flechas) ====== */
-.controls {
-  pointer-events: none; /* deja pasar scroll/drag al strip */
-  position: absolute;
-  inset: 0; /* top/right/bottom/left */
-}
-
-.ctrl-pair {
-  /* por defecto oculto; se muestra el par activo vía :has en grilla-root.css */
-  display: none;
-  pointer-events: none;
-}
-
-.arrow {
-  pointer-events: auto;
-  position: absolute;
-  top: 50%;
-  translate: 0 -50%;
-  display: grid;
-  place-items: center;
-  width: 42px; height: 42px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 1.4rem;
-  border: 1px solid transparent;
-  transition: transform .5s ease, box-shadow .5s ease, opacity .5s ease;
-}
-.arrow.prev { left: .25rem; }
-.arrow.next { right: .25rem; }
-.arrow:active { transform: translateY(0) scale(.98); }
-
-/* ====== Modales (estructura base, sin colores) ====== */
-.modal-dialog { max-width: min(1000px, 96vw); }
-/* .modal-img { width: 100%; height: auto; display: block; border-radius: 8px; } */
-
-/* ====== Accesibilidad ====== */
-.arrow i { line-height: 1; }
-
-/* ====== Responsive menores ====== */
-@media (max-width: 480px) {
-  .snap-strip { grid-auto-columns: clamp(200px, 80vw, 280px); }
-  .arrow { width: 38px; height: 38px; font-size: 1.25rem; }
+/* XS–SM: ajustes móviles */
+@media (max-width: 576px){
+  .carousel-card{ width:70vw; min-width: 70vw; }
+  .carousel-card .card-body{ padding:.5rem; }
+  /* Flechas un poco más chicas si lo deseas (opcional)
+  .arrow{ width:38px; height:38px; font-size:1.25rem; }
+  */
+  /* Vídeo dentro del modal sin hacks de altura */
+  .div-figure{ height:auto; }
+  .youtube{ height:auto; transform:none; }
 }
 
-.div-figure{
-  position: relative;
-  width: 100%;
-  height: 100dvh;
-  overflow: hidden;
-  border-radius: 15px;
+/* MD: cards más compactas y fijas */
+@media (min-width: 576px){
+  .carousel-card{ width:240px; min-width:240px; }
 }
 
-.youtube{
-  display: block;
- 
-  transform: translateY(-1px);         /* sube 1px… */
-  height: calc(100% + 2px);            /* …y agrega 2px de alto para que no falte nada */
+/* LG+: tamaño final */
+@media (min-width: 768px){
+  .carousel-card{ width:260px; min-width:260px; }
 }

@@ -23,7 +23,7 @@
   <main class="py-4">
     <div class="container">
       <header class="text-center mb-3">
-        <h1 class="h4 mb-1 text-start">Comedia</h1>
+        <h1 class="h4 mb-1 text-start">Populares</h1>
       </header>
   
       <div class="carousel-wrap">
@@ -232,130 +232,111 @@
       <!-- ===========================
            MODALES (uno por imagen)
            =========================== -->
-      <div class="modal fade" id="modal-s1" tabindex="-1" aria-labelledby="modal-s1-label" aria-describedby="modal-s1-desc" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-75w" role="dialog">
-        <div class="modal-content">
-          <div class="modal-header d-flex justify-content-between align-items-center border-0">
-            <h2 id="modal-s1-label" class="modal-title h5 mb-0">ED, EDD Y EDDY</h2>
-            <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar">
-              <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
-            </button>
-          </div>
-          
-          <div class="modal-body p-0" id="modal-s1-desc">
-            <!-- Video / tráiler -->
-            <div class="ratio ratio-16x9 overflow-hidden">
-              <iframe
-                class="youtube d-block border-0"
-                src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
-                title="Video"
-                allow="autoplay; encrypted-media; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          
-            <!-- Temporadas (izq) / Episodios (der) -->
-            <div class="container py-4">
-              <div class="row g-4">
-                <!-- IZQUIERDA: Temporadas (List group con tabs) -->
-                <div class="col-md-4 col-lg-3">
-                  <h3 class="h6 mb-3">Temporadas</h3>
-                  <div class="list-group" id="season-list" role="tablist">
-                    <button
-                      class="list-group-item list-group-item-action active"
-                      id="season-1-tab"
-                      data-bs-toggle="list"
-                      data-bs-target="#season-1-pane"
-                      type="button" role="tab"
-                      aria-controls="season-1-pane"
-                      aria-selected="true">
-                      Temporada 1
-                    </button>
-                    <button
-                      class="list-group-item list-group-item-action"
-                      id="season-2-tab"
-                      data-bs-toggle="list"
-                      data-bs-target="#season-2-pane"
-                      type="button" role="tab"
-                      aria-controls="season-2-pane"
-                      aria-selected="false">
-                      Temporada 2
-                    </button>
-                    <button
-                      class="list-group-item list-group-item-action"
-                      id="season-3-tab"
-                      data-bs-toggle="list"
-                      data-bs-target="#season-3-pane"
-                      type="button" role="tab"
-                      aria-controls="season-3-pane"
-                      aria-selected="false">
-                      Temporada 3
-                    </button>
-                  </div>
-                </div>
-          
-                <!-- DERECHA: Episodios (Tab content) -->
-                <div class="col-md-8 col-lg-9">
-                  <h3 class="h6 mb-3">Episodios</h3>
-          
-                  <div class="tab-content" id="season-tabContent">
-                    <!-- Temporada 1 -->
-                    <div
-                      class="tab-pane fade show active"
-                      id="season-1-pane"
-                      role="tabpanel"
-                      aria-labelledby="season-1-tab"
-                      tabindex="0">
-                      <ol class="list-group">
-                        <li class="list-group-item">Episodio 1: “Y un sombrío día nació”</li>
-                        <li class="list-group-item">Episodio 2: “El sombrío encanto de la soledad”</li>
-                        <li class="list-group-item">Episodio 3: “Amistad, sombrío tesoro”</li>
-                        <li class="list-group-item">Episodio 4: “Una sombría noche de baile”</li>
-                        <li class="list-group-item">Episodio 5: “Cosecharás tu sombría siembra”</li>
-                      </ol>
-                    </div>
-          
-                    <!-- Temporada 2 -->
-                    <div
-                      class="tab-pane fade"
-                      id="season-2-pane"
-                      role="tabpanel"
-                      aria-labelledby="season-2-tab"
-                      tabindex="0">
-                      <ol class="list-group">
-                        <li class="list-group-item">Episodio 1: “Título S2E1”</li>
-                        <li class="list-group-item">Episodio 2: “Título S2E2”</li>
-                        <li class="list-group-item">Episodio 3: “Título S2E3”</li>
-                        <li class="list-group-item">Episodio 4: “Título S2E4”</li>
-                        <li class="list-group-item">Episodio 5: “Título S2E5”</li>
-                      </ol>
-                    </div>
-          
-                    <!-- Temporada 3 -->
-                    <div
-                      class="tab-pane fade"
-                      id="season-3-pane"
-                      role="tabpanel"
-                      aria-labelledby="season-3-tab"
-                      tabindex="0">
-                      <ol class="list-group">
-                        <li class="list-group-item">Episodio 1: “Título S3E1”</li>
-                        <li class="list-group-item">Episodio 2: “Título S3E2”</li>
-                        <li class="list-group-item">Episodio 3: “Título S3E3”</li>
-                        <li class="list-group-item">Episodio 4: “Título S3E4”</li>
-                        <li class="list-group-item">Episodio 5: “Título S3E5”</li>
-                      </ol>
-                    </div>
-                  </div>
-                </div>
-                <!-- /Derecha -->
+           <div class="modal fade" id="modal-s1" tabindex="-1" aria-labelledby="modal-s1-label" aria-describedby="modal-s1-desc" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-75w" role="dialog">
+            <div class="modal-content">
+              <div class="modal-header d-flex justify-content-between align-items-center border-0">
+                <h2 id="modal-s1-label" class="modal-title h5 mb-0">ED, EDD Y EDDY</h2>
+                <button type="button" class="btn p-0 border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Cerrar">
+                  <i class="bi bi-x-lg fs-4" aria-hidden="true"></i>
+                </button>
               </div>
+              
+              <div class="modal-body p-0" id="modal-s1-desc">
+                <!-- Video / tráiler -->
+                <div class="ratio ratio-16x9 overflow-hidden">
+                  <iframe
+                    class="youtube d-block border-0"
+                    src="https://www.youtube.com/embed/OzUkzLDQZxY?autoplay=0&mute=0&controls=0&modestbranding=1&rel=0&playsinline=1&loop=1&playlist=OzUkzLDQZxY"
+                    title="Video"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+                <div class="p-3">
+                  <h4 class="h6">Descripcion</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, commodi dolor dignissimos quo dolorum voluptates aliquam eveniet excepturi perferendis atque rem fugit aliquid quidem sed aperiam in quas, fuga accusantium molestias tempore doloribus recusandae reprehenderit expedita. Aperiam, dolorum in. Eius.</p>
+                </div>
+              
+                <!-- Temporadas (izq) / Episodios (der) -->
+                <div class="container py-4">
+                  <div class="row g-4">
+                    <!-- IZQUIERDA: Temporadas (List group con tabs) -->
+                    <div class="col-md-4 col-lg-3">
+                      <h3 class="h6 mb-3">Temporadas</h3>
+                      <div class="list-group" id="season-list" role="tablist">
+                        <button
+                          class="list-group-item list-group-item-action active"
+                          id="season-1-tab"
+                          data-bs-toggle="list"
+                          data-bs-target="#season-1-pane"
+                          type="button" role="tab"
+                          aria-controls="season-1-pane"
+                          aria-selected="true">
+                          Temporada 1
+                        </button>
+                        <button
+                          class="list-group-item list-group-item-action"
+                          id="season-2-tab"
+                          data-bs-toggle="list"
+                          data-bs-target="#season-2-pane"
+                          type="button" role="tab"
+                          aria-controls="season-2-pane"
+                          aria-selected="false">
+                          Temporada 2
+                        </button>
+                      
+                      </div>
+                    </div>
+              
+                    <!-- DERECHA: Episodios (Tab content) -->
+                    <div class="col-md-8 col-lg-9">
+                      <h3 class="h6 mb-3">Episodios</h3>
+              
+                      <div class="tab-content" id="season-tabContent">
+                        <!-- Temporada 1 -->
+                        <div
+                          class="tab-pane fade show active"
+                          id="season-1-pane"
+                          role="tabpanel"
+                          aria-labelledby="season-1-tab"
+                          tabindex="0">
+                          <ol class="list-group">
+                            <li class="list-group-item">Episodio 1: “Los Ed-touchables - Nagged a Ed”</li>
+                            <li class="list-group-item">Episodio 2: “Pop pasa el Ed por encima de tu Ed”</li>
+                            <li class="list-group-item">Episodio 3: “Sir Ed a-Lot - Un pellizco para hacer crecer un Ed”</li>
+                            <li class="list-group-item">Episodio 4: “El amanecer de los Eds - Vert-Ed-Go”</li>
+                            <li class="list-group-item">Episodio 5: “Lea todo sobre.Ed - Quick Shot Ed”</li>
+                          </ol>
+                        </div>
+              
+                        <!-- Temporada 2 -->
+                        <div
+                          class="tab-pane fade"
+                          id="season-2-pane"
+                          role="tabpanel"
+                          aria-labelledby="season-2-tab"
+                          tabindex="0">
+                          <ol class="list-group">
+                            <li class="list-group-item">Episodio 1: “Un Ed Demasiado - Ed-n-Seek”</li>
+                            <li class="list-group-item">Episodio 2: “Mira mis Eds - Etiqueta tu Ed”</li>
+                            <li class="list-group-item">Episodio 3: “Fool On the Ed - Un niño y su Ed”</li>
+                            <li class="list-group-item">Episodio 4: “Así es Ed - Ríe Ed Ríe”</li>
+                            <li class="list-group-item">Episodio 5: “Un vaso de Ed cálido - Ed mordido por pulgas”</li>
+                          </ol>
+                        </div>
+              
+                        
+                      </div>
+                    </div>
+                    <!-- /Derecha -->
+                  </div>
+                </div>
+              </div>
+              
+            </div>
             </div>
           </div>
-          
-        </div>
-        </div>
-      </div>
         
   
       <div class="modal fade" id="modal-s2" tabindex="-1" aria-labelledby="modal-s2-label" aria-describedby="modal-s2-desc" aria-hidden="true">
@@ -379,13 +360,91 @@
                     class="border-0 w-100 h-100">
                   </iframe>
                 </div>
-                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
-              </figure>
+                <div class="p-3">
+                  <h4 class="h6">Descripcion</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, commodi dolor dignissimos quo dolorum voluptates aliquam eveniet excepturi perferendis atque rem fugit aliquid quidem sed aperiam in quas, fuga accusantium molestias tempore doloribus recusandae reprehenderit expedita. Aperiam, dolorum in. Eius.</p>
+                </div>
+              
+                <!-- Temporadas (izq) / Episodios (der) -->
+                <div class="container py-4">
+                  <div class="row g-4">
+                    <!-- IZQUIERDA: Temporadas (List group con tabs) -->
+                    <div class="col-md-4 col-lg-3">
+                      <h3 class="h6 mb-3">Temporadas</h3>
+                      <div class="list-group" id="season-list" role="tablist">
+                        <button
+                          class="list-group-item list-group-item-action active"
+                          id="season-1-tab"
+                          data-bs-toggle="list"
+                          data-bs-target="#season-1-pane"
+                          type="button" role="tab"
+                          aria-controls="season-1-pane"
+                          aria-selected="true">
+                          Temporada 1
+                        </button>
+                        <button
+                          class="list-group-item list-group-item-action"
+                          id="season-2-tab"
+                          data-bs-toggle="list"
+                          data-bs-target="#season-2-pane"
+                          type="button" role="tab"
+                          aria-controls="season-2-pane"
+                          aria-selected="false">
+                          Temporada 2
+                        </button>
+                      
+                      </div>
+                    </div>
+              
+                    <!-- DERECHA: Episodios (Tab content) -->
+                    <div class="col-md-8 col-lg-9">
+                      <h3 class="h6 mb-3">Episodios</h3>
+              
+                      <div class="tab-content" id="season-tabContent">
+                        <!-- Temporada 1 -->
+                        <div
+                          class="tab-pane fade show active"
+                          id="season-1-pane"
+                          role="tabpanel"
+                          aria-labelledby="season-1-tab"
+                          tabindex="0">
+                          <ol class="list-group">
+                            <li class="list-group-item">Episodio 1: “Los Ed-touchables - Nagged a Ed”</li>
+                            <li class="list-group-item">Episodio 2: “Pop pasa el Ed por encima de tu Ed”</li>
+                            <li class="list-group-item">Episodio 3: “Sir Ed a-Lot - Un pellizco para hacer crecer un Ed”</li>
+                            <li class="list-group-item">Episodio 4: “El amanecer de los Eds - Vert-Ed-Go”</li>
+                            <li class="list-group-item">Episodio 5: “Lea todo sobre.Ed - Quick Shot Ed”</li>
+                          </ol>
+                        </div>
+              
+                        <!-- Temporada 2 -->
+                        <div
+                          class="tab-pane fade"
+                          id="season-2-pane"
+                          role="tabpanel"
+                          aria-labelledby="season-2-tab"
+                          tabindex="0">
+                          <ol class="list-group">
+                            <li class="list-group-item">Episodio 1: “Un Ed Demasiado - Ed-n-Seek”</li>
+                            <li class="list-group-item">Episodio 2: “Mira mis Eds - Etiqueta tu Ed”</li>
+                            <li class="list-group-item">Episodio 3: “Fool On the Ed - Un niño y su Ed”</li>
+                            <li class="list-group-item">Episodio 4: “Así es Ed - Ríe Ed Ríe”</li>
+                            <li class="list-group-item">Episodio 5: “Un vaso de Ed cálido - Ed mordido por pulgas”</li>
+                          </ol>
+                        </div>
+              
+                        
+                      </div>
+                    </div>
+                    <!-- /Derecha -->
+                  </div>
+                </div>
+              </div>
+              
+            </div>
             </div>
           </div>
-        </div>
-      </div>
-  
+
       <div class="modal fade" id="modal-s3" tabindex="-1" aria-labelledby="modal-s3-label" aria-describedby="modal-s3-desc" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
           <div class="modal-content">
@@ -407,12 +466,90 @@
                     class="border-0 w-100 h-100">
                   </iframe>
                 </div>
-                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
-              </figure>
+                <div class="p-3">
+                  <h4 class="h6">Descripcion</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, commodi dolor dignissimos quo dolorum voluptates aliquam eveniet excepturi perferendis atque rem fugit aliquid quidem sed aperiam in quas, fuga accusantium molestias tempore doloribus recusandae reprehenderit expedita. Aperiam, dolorum in. Eius.</p>
+                </div>
+              
+                <!-- Temporadas (izq) / Episodios (der) -->
+                <div class="container py-4">
+                  <div class="row g-4">
+                    <!-- IZQUIERDA: Temporadas (List group con tabs) -->
+                    <div class="col-md-4 col-lg-3">
+                      <h3 class="h6 mb-3">Temporadas</h3>
+                      <div class="list-group" id="season-list" role="tablist">
+                        <button
+                          class="list-group-item list-group-item-action active"
+                          id="season-1-tab"
+                          data-bs-toggle="list"
+                          data-bs-target="#season-1-pane"
+                          type="button" role="tab"
+                          aria-controls="season-1-pane"
+                          aria-selected="true">
+                          Temporada 1
+                        </button>
+                        <button
+                          class="list-group-item list-group-item-action"
+                          id="season-2-tab"
+                          data-bs-toggle="list"
+                          data-bs-target="#season-2-pane"
+                          type="button" role="tab"
+                          aria-controls="season-2-pane"
+                          aria-selected="false">
+                          Temporada 2
+                        </button>
+                      
+                      </div>
+                    </div>
+              
+                    <!-- DERECHA: Episodios (Tab content) -->
+                    <div class="col-md-8 col-lg-9">
+                      <h3 class="h6 mb-3">Episodios</h3>
+              
+                      <div class="tab-content" id="season-tabContent">
+                        <!-- Temporada 1 -->
+                        <div
+                          class="tab-pane fade show active"
+                          id="season-1-pane"
+                          role="tabpanel"
+                          aria-labelledby="season-1-tab"
+                          tabindex="0">
+                          <ol class="list-group">
+                            <li class="list-group-item">Episodio 1: “Los Ed-touchables - Nagged a Ed”</li>
+                            <li class="list-group-item">Episodio 2: “Pop pasa el Ed por encima de tu Ed”</li>
+                            <li class="list-group-item">Episodio 3: “Sir Ed a-Lot - Un pellizco para hacer crecer un Ed”</li>
+                            <li class="list-group-item">Episodio 4: “El amanecer de los Eds - Vert-Ed-Go”</li>
+                            <li class="list-group-item">Episodio 5: “Lea todo sobre.Ed - Quick Shot Ed”</li>
+                          </ol>
+                        </div>
+              
+                        <!-- Temporada 2 -->
+                        <div
+                          class="tab-pane fade"
+                          id="season-2-pane"
+                          role="tabpanel"
+                          aria-labelledby="season-2-tab"
+                          tabindex="0">
+                          <ol class="list-group">
+                            <li class="list-group-item">Episodio 1: “Un Ed Demasiado - Ed-n-Seek”</li>
+                            <li class="list-group-item">Episodio 2: “Mira mis Eds - Etiqueta tu Ed”</li>
+                            <li class="list-group-item">Episodio 3: “Fool On the Ed - Un niño y su Ed”</li>
+                            <li class="list-group-item">Episodio 4: “Así es Ed - Ríe Ed Ríe”</li>
+                            <li class="list-group-item">Episodio 5: “Un vaso de Ed cálido - Ed mordido por pulgas”</li>
+                          </ol>
+                        </div>
+              
+                        
+                      </div>
+                    </div>
+                    <!-- /Derecha -->
+                  </div>
+                </div>
+              </div>
+              
+            </div>
             </div>
           </div>
-        </div>
-      </div>
   
       <div class="modal fade" id="modal-s4" tabindex="-1" aria-labelledby="modal-s4-label" aria-describedby="modal-s4-desc" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
@@ -435,12 +572,90 @@
                     class="border-0 w-100 h-100">
                   </iframe>
                 </div>
-                <figcaption class="mb-0 text-secondary">Vista del mar.</figcaption>
-              </figure>
+                <div class="p-3">
+                  <h4 class="h6">Descripcion</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, commodi dolor dignissimos quo dolorum voluptates aliquam eveniet excepturi perferendis atque rem fugit aliquid quidem sed aperiam in quas, fuga accusantium molestias tempore doloribus recusandae reprehenderit expedita. Aperiam, dolorum in. Eius.</p>
+                </div>
+              
+                <!-- Temporadas (izq) / Episodios (der) -->
+                <div class="container py-4">
+                  <div class="row g-4">
+                    <!-- IZQUIERDA: Temporadas (List group con tabs) -->
+                    <div class="col-md-4 col-lg-3">
+                      <h3 class="h6 mb-3">Temporadas</h3>
+                      <div class="list-group" id="season-list" role="tablist">
+                        <button
+                          class="list-group-item list-group-item-action active"
+                          id="season-1-tab"
+                          data-bs-toggle="list"
+                          data-bs-target="#season-1-pane"
+                          type="button" role="tab"
+                          aria-controls="season-1-pane"
+                          aria-selected="true">
+                          Temporada 1
+                        </button>
+                        <button
+                          class="list-group-item list-group-item-action"
+                          id="season-2-tab"
+                          data-bs-toggle="list"
+                          data-bs-target="#season-2-pane"
+                          type="button" role="tab"
+                          aria-controls="season-2-pane"
+                          aria-selected="false">
+                          Temporada 2
+                        </button>
+                      
+                      </div>
+                    </div>
+              
+                    <!-- DERECHA: Episodios (Tab content) -->
+                    <div class="col-md-8 col-lg-9">
+                      <h3 class="h6 mb-3">Episodios</h3>
+              
+                      <div class="tab-content" id="season-tabContent">
+                        <!-- Temporada 1 -->
+                        <div
+                          class="tab-pane fade show active"
+                          id="season-1-pane"
+                          role="tabpanel"
+                          aria-labelledby="season-1-tab"
+                          tabindex="0">
+                          <ol class="list-group">
+                            <li class="list-group-item">Episodio 1: “Los Ed-touchables - Nagged a Ed”</li>
+                            <li class="list-group-item">Episodio 2: “Pop pasa el Ed por encima de tu Ed”</li>
+                            <li class="list-group-item">Episodio 3: “Sir Ed a-Lot - Un pellizco para hacer crecer un Ed”</li>
+                            <li class="list-group-item">Episodio 4: “El amanecer de los Eds - Vert-Ed-Go”</li>
+                            <li class="list-group-item">Episodio 5: “Lea todo sobre.Ed - Quick Shot Ed”</li>
+                          </ol>
+                        </div>
+              
+                        <!-- Temporada 2 -->
+                        <div
+                          class="tab-pane fade"
+                          id="season-2-pane"
+                          role="tabpanel"
+                          aria-labelledby="season-2-tab"
+                          tabindex="0">
+                          <ol class="list-group">
+                            <li class="list-group-item">Episodio 1: “Un Ed Demasiado - Ed-n-Seek”</li>
+                            <li class="list-group-item">Episodio 2: “Mira mis Eds - Etiqueta tu Ed”</li>
+                            <li class="list-group-item">Episodio 3: “Fool On the Ed - Un niño y su Ed”</li>
+                            <li class="list-group-item">Episodio 4: “Así es Ed - Ríe Ed Ríe”</li>
+                            <li class="list-group-item">Episodio 5: “Un vaso de Ed cálido - Ed mordido por pulgas”</li>
+                          </ol>
+                        </div>
+              
+                        
+                      </div>
+                    </div>
+                    <!-- /Derecha -->
+                  </div>
+                </div>
+              </div>
+              
+            </div>
             </div>
           </div>
-        </div>
-      </div>
   
       <div class="modal fade" id="modal-s5" tabindex="-1" aria-labelledby="modal-s5-label" aria-describedby="modal-s5-desc" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog">
@@ -613,6 +828,7 @@
       
     </div>
     </div>
+    
   </main>
 
 <!-- Bootstrap JS (necesario para que el modal funcione) -->

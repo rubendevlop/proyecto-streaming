@@ -1,90 +1,170 @@
-/* ====== Fondo general y texto base ====== */
-body{
-  background-color: aliceblue;
+/* ====== Base (usa tokens de root.css) ====== */
+html, body { 
+  background: var(--bg); 
+  color: var(--text); 
+}
+h1, h2, h3, .modal-title { 
+  color: var(--primary); /* antes --courage-300 */ 
+}
+.text-secondary, figcaption { 
+  color: var(--muted) !important; 
+}
+.container { 
+  color: var(--text); 
 }
 
-.container { background: var(--bg-925); color: var(--text-200); }
-
-/* ====== Encabezado del bloque (tu <header> dentro del .container) ====== */
-header.text-center { color: var(--text-200); }
-header .text-secondary { color: var(--text-400) !important; }
-h1, h2, h3, .modal-title { color: var(--accent-primary); }
-
-/* ====== Tira y scrollbar ====== */
-.snap-strip { background: transparent; }
-
-
-/* ====== Tarjeta ====== */
-.card {
-  background: var(--bg-860);
-  border-color: var(--border-100);
-  box-shadow: 0 6px 14px var(--alpha-shadow);
+/* ====== Carrusel ====== */
+.carousel-strip {
+  -ms-overflow-style: none;   /* IE/Edge antiguo */
+  scrollbar-width: none;      /* Firefox */
 }
-.card:hover { box-shadow: 0 10px 22px var(--alpha-shadow); }
-.card img { border-bottom: 3px solid var(--accent-primary); }
-.card-title { color: var(--text-300); }
+.carousel-strip::-webkit-scrollbar { display: none; } /* Chrome/Safari/Edge */
+
+/* ====== Card del carrusel ====== */
+.carousel-card {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border) !important;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+  transition: transform .2s ease-in-out, 
+              box-shadow .2s ease-in-out, 
+              border-color .2s ease-in-out;
+}
+.carousel-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.45);
+  border-color: var(--primary);
+}
+
+/* Imagen dentro del .ratio */
+.carousel-card .ratio > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid var(--primary);
+}
+
+/* Título compacto */
+.carousel-card .card-body { 
+  padding: .5rem .75rem; 
+}
+.carousel-card .card-title { 
+  color: var(--primary); /* antes --courage-300 */ 
+}
 
 /* ====== Flechas ====== */
-.arrow {
-  background: color-mix(in srgb, var(--bg-850) 88%, transparent);
-  border-color: var(--border-200);
-  color: var(--brand-accent);
-  box-shadow: 0 6px 14px var(--alpha-shadow);
-  backdrop-filter: blur(2px);
+.controls {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
 }
-.arrow:hover { color: var(--accent-primary); }
+.ctrl-pair { display: none; pointer-events: none; }
+
+.arrow {
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  display: grid;
+  place-items: center;
+  width: 42px; height: 42px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  border: 1px solid var(--border);
+  color: var(--primary);
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+  backdrop-filter: blur(2px);
+  transition: transform .2s ease, 
+              box-shadow .2s ease, 
+              color .2s ease, 
+              border-color .2s ease, 
+              opacity .2s ease;
+}
+.arrow:hover {
+  color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
 .arrow:focus-visible {
-  outline: 2px solid var(--brand-accent);
+  outline: 2px solid var(--primary); /* antes ghost-teal */
   outline-offset: 2px;
 }
+.arrow.prev { left: .25rem; }
+.arrow.next { right: .25rem; }
+.arrow:active { transform: translateY(0) scale(.98); }
+.arrow i { line-height: 1; }
 
-/* ====== Mostrar el par de controles activo con :has() ======
-   Si no hay :target en la URL, mostramos el par s1 por defecto. */
-/* Por defecto ocultos */
-.controls .ctrl-pair { display: none; }
+/* Mostrar el par activo según :target; s1 por defecto */
+.carousel-wrap:has(#s1:target)  .controls .s1  { display:block; }
+.carousel-wrap:has(#s2:target)  .controls .s2  { display:block; }
+.carousel-wrap:has(#s3:target)  .controls .s3  { display:block; }
+.carousel-wrap:has(#s4:target)  .controls .s4  { display:block; }
+.carousel-wrap:has(#s5:target)  .controls .s5  { display:block; }
+.carousel-wrap:has(#s6:target)  .controls .s6  { display:block; }
+.carousel-wrap:has(#s7:target)  .controls .s7  { display:block; }
+.carousel-wrap:has(#s8:target)  .controls .s8  { display:block; }
+.carousel-wrap:has(#s9:target)  .controls .s9  { display:block; }
+.carousel-wrap:has(#s10:target) .controls .s10 { display:block; }
+.carousel-wrap:not(:has(:target)) .controls .s1 { display:block; }
 
-/* Mostrar el par según el objetivo actual */
-.carousel-wrap:has(#s1:target)  .controls .s1  { display: block; }
-.carousel-wrap:has(#s2:target)  .controls .s2  { display: block; }
-.carousel-wrap:has(#s3:target)  .controls .s3  { display: block; }
-.carousel-wrap:has(#s4:target)  .controls .s4  { display: block; }
-.carousel-wrap:has(#s5:target)  .controls .s5  { display: block; }
-.carousel-wrap:has(#s6:target)  .controls .s6  { display: block; }
-.carousel-wrap:has(#s7:target)  .controls .s7  { display: block; }
-.carousel-wrap:has(#s8:target)  .controls .s8  { display: block; }
-.carousel-wrap:has(#s9:target)  .controls .s9  { display: block; }
-.carousel-wrap:has(#s10:target) .controls .s10 { display: block; }
-
-/* Si no hay :target aún, usar s1 como default */
-.carousel-wrap:not(:has(:target)) .controls .s1 { display: block; }
-
-
-/* ====== Modales (tema oscuro) ====== */
+/* ====== Modal ====== */
 .modal-content {
-  background: var(--bg-900);
-  color: var(--text-200);
-  border: 1px solid var(--border-200);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
   border-radius: 12px;
-  box-shadow: 0 18px 40px var(--alpha-shadow);
+  box-shadow: 0 18px 40px rgba(0,0,0,.5);
 }
 .modal-header {
-  background: var(--bg-850);
-  color: var(--text-100);
-  border-bottom: 1px solid var(--border-200);
+  background: color-mix(in srgb, var(--surface) 88%, transparent);
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
 }
-.modal-body figcaption { color: var(--text-400); }
+.modal-title { color: var(--primary); }
 
-/* Botón de cierre (X) */
+/* botón X */
 .modal-header .btn {
-  color: var(--text-100);
-  transition: color .15s ease, transform .15s ease, background-color .15s ease;
+  color: var(--text);
+  transition: color .15s ease, transform .15s ease;
 }
-.modal-header .btn:hover { color: var(--accent-danger); transform: rotate(90deg); }
+.modal-header .btn:hover {
+  color: var(--primary-hover);
+  transform: rotate(90deg);
+}
 
-/* ====== Ajustes finos ====== */
-.text-secondary, figcaption { color: var(--text-400) !important; }
+/* Ancho 75% del viewport para tu modal custom */
+.modal-75w { max-width: 75vw; }
 
-/* .modal-img{
-    width: 100%;
-    height: 40rem;
-} */
+/* ====== Listas ====== */
+.list-group {
+  --bs-list-group-bg: var(--surface);
+  --bs-list-group-color: var(--text);
+  --bs-list-group-border-color: var(--border);
+  background: var(--surface);
+  border-color: var(--border);
+}
+.list-group-item {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+.list-group-item:hover {
+  background: color-mix(in srgb, var(--surface) 85%, var(--primary) 15%);
+}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--text); /* antes usabas --primary-contrast */
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 576px){
+  .modal-75w { max-width: 96vw; }
+  .arrow { width: 38px; height: 38px; font-size: 1.25rem; }
+}
