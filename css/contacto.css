@@ -58,6 +58,10 @@ body {
 }
 .iconosinfo{
   color: var(--cloud-50);
+  text-decoration: none;
+}
+.iconosinformacion:hover{
+  color: var(--primary);
 }
 .textoinfo{
   color: var(--text);
