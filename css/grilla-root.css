@@ -13,16 +13,10 @@ h1, h2, h3, .modal-title {
   color: var(--text); 
 }
 
-/* ====== Carrusel ====== */
-.carousel-strip {
-  -ms-overflow-style: none;   /* IE/Edge antiguo */
-  scrollbar-width: none;      /* Firefox */
-}
-.carousel-strip::-webkit-scrollbar { display: none; } /* Chrome/Safari/Edge */
 
 /* ====== Card del carrusel ====== */
-.carousel-card {
-  background: var(--surface);
+.card {
+  background: var(--surface) !important;
   color: var(--text);
   border: 1px solid var(--border) !important;
   border-radius: 10px;
@@ -30,29 +24,25 @@ h1, h2, h3, .modal-title {
   transition: transform .2s ease-in-out, 
               box-shadow .2s ease-in-out, 
               border-color .2s ease-in-out;
+  width: 10rem;
+  height: 8.1rem!important;
 }
-.carousel-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.45);
-  border-color: var(--primary);
+.card:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 22px rgba(0,0,0,.45) !;
+  border-color: var(--primary) !important;
 }
 
 /* Imagen dentro del .ratio */
-.carousel-card .ratio > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card .ratio > img {
+  width: 100% !important;
+  height: 8rem !important;  
   display: block;
-  border-bottom: 3px solid var(--primary);
+  border-bottom: 3px solid var(--primary) !important;
 }
 
 /* Título compacto */
-.carousel-card .card-body { 
-  padding: .5rem .75rem; 
-}
-.carousel-card .card-title { 
-  color: var(--primary); /* antes --courage-300 */ 
-}
+
 
 /* ====== Flechas ====== */
 .controls {
@@ -66,8 +56,8 @@ h1, h2, h3, .modal-title {
 .arrow {
   pointer-events: auto;
   position: absolute;
-  top: 50%;
-  translate: 0 -50%;
+  top: 3rem;
+  
   display: grid;
   place-items: center;
   width: 42px; height: 42px;
@@ -99,17 +89,25 @@ h1, h2, h3, .modal-title {
 .arrow i { line-height: 1; }
 
 /* Mostrar el par activo según :target; s1 por defecto */
-.carousel-wrap:has(#s1:target)  .controls .s1  { display:block; }
-.carousel-wrap:has(#s2:target)  .controls .s2  { display:block; }
-.carousel-wrap:has(#s3:target)  .controls .s3  { display:block; }
-.carousel-wrap:has(#s4:target)  .controls .s4  { display:block; }
-.carousel-wrap:has(#s5:target)  .controls .s5  { display:block; }
-.carousel-wrap:has(#s6:target)  .controls .s6  { display:block; }
-.carousel-wrap:has(#s7:target)  .controls .s7  { display:block; }
-.carousel-wrap:has(#s8:target)  .controls .s8  { display:block; }
-.carousel-wrap:has(#s9:target)  .controls .s9  { display:block; }
-.carousel-wrap:has(#s10:target) .controls .s10 { display:block; }
-.carousel-wrap:not(:has(:target)) .controls .s1 { display:block; }
+.carousel-contenedor:has(#s1:target)  .controls .s1  { display:block; }
+.carousel-contenedor:has(#s2:target)  .controls .s2  { display:block; }
+.carousel-contenedor:has(#s3:target)  .controls .s3  { display:block; }
+.carousel-contenedor:has(#s4:target)  .controls .s4  { display:block; }
+.carousel-contenedor:has(#s5:target)  .controls .s5  { display:block; }
+.carousel-contenedor:has(#s6:target)  .controls .s6  { display:block; }
+.carousel-contenedor:has(#s7:target)  .controls .s7  { display:block; }
+.carousel-contenedor:has(#s8:target)  .controls .s8  { display:block; }
+.carousel-contenedor:has(#s9:target)  .controls .s9  { display:block; }
+.carousel-contenedor:has(#s10:target) .controls .s10 { display:block; }
+.carousel-contenedor:not(:has(:target)) .controls .s1 { display:block; }
+/* Card activa resaltada */
+/* .carousel-contenedor article:target .carousel-card {
+  box-shadow: 5px 5px 15px var(--primary-hover) !important;
+  transform: scale(1.03);
+  transition: box-shadow .3s ease, transform .3s ease;
+} */
+
+
 
 /* ====== Modal ====== */
 .modal-content {
@@ -163,8 +161,180 @@ h1, h2, h3, .modal-title {
   color: var(--text); /* antes usabas --primary-contrast */
 }
 
+/* Panel expandible DEBAJO de la imagen (flujo normal) */
+.reveal-panel{
+
+  /* transición suave */
+  transition:
+    max-height .35s ease,
+    opacity .25s ease,
+    padding .35s ease,
+    margin .35s ease;
+}
+
+/* look del texto del panel (opcional) */
+.reveal-panel h4{ color: inherit; }
+.reveal-panel p { color: inherit; }
+
+/* En desktop: al pasar el mouse por la card, el panel se ABRE */
+@media (hover:hover) and (pointer:fine){
+  .carousel-contenedor .card:hover{
+    display: flex;
+    flex-wrap:nowrap;
+    margin: 0;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.18)!important;
+    height: 14rem !important;   
+  }
+  .reveal-panel{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+    width: 16rem;
+    position: relative;
+    bottom: 65px;
+    border-radius: 5px;
+
+  }
+
+ 
+  
+  .reveal-panel h4{
+    font-size: 10px !important;
+    
+  }
+  .reveal-panel p{
+    font-size: 10px;
+    width: 100%;
+  }
+  
+  .carousel-contenedor .card:hover .reveal-panel,
+  .carousel-con tenedor .card:focus-within .reveal-panel{
+    max-height: 10px !important;                 /* ajusta según el contenido */
+    opacity: 1 !important;
+    padding: .5rem .75rem .75rem !important;      /* ahora sí padding vertical */
+  }
+
+ 
+  /* Botón pequeño cuadrado */
+.btn-icon {
+  width: 28px;         /* ancho fijo */
+  height: 28px;        /* alto fijo */
+  display: inline-flex;
+  align-items: center; /* centra vertical */
+  justify-content: center; /* centra horizontal */
+  padding: 0;          /* quita padding extra de bootstrap */
+  border-radius: 50%;  /* opcional, lo hace redondo */
+}
+
+/* El ícono se ajusta al centro automáticamente */
+.btn-icon i {
+  font-size: 14px;  /* tamaño visual del icono */
+  line-height: 1;   /* corrige que no quede desalineado */
+}
+
+
+
+
+}
+
+/* En pantallas táctiles no hay hover → usa tu modal */
+@media (pointer:coarse){
+  .reveal-panel{ display: none; }
+}
+
+
 /* ====== Responsive ====== */
 @media (max-width: 576px){
   .modal-75w { max-width: 96vw; }
-  .arrow { width: 38px; height: 38px; font-size: 1.25rem; }
+  .arrow { display: none;}
 }
+
+@media (max-width: 800px){
+  
+  .arrow { display: none;}
+}
+
+
+
+/* ===================================================== */
+/* ============= FIXES (sin borrar lo tuyo) ============= */
+/* ===================================================== */
+
+/* 1) El carrusel no recorta al crecer (panel fuera de la card) */
+.contenedor-cards{
+  overflow-y: visible;
+}
+
+/* 2) Flechas siempre arriba y clickeables */
+.controls{
+  z-index: 9999;
+  pointer-events: none;
+}
+.arrow{ pointer-events: auto; }
+
+/* 3) No cambies la altura de la card en hover (evita salto de flechas) */
+.carousel-contenedor .card:hover{
+  height: 8.1rem !important;  /* neutraliza el 14rem anterior */
+}
+.card:hover{
+  box-shadow: 0 10px 22px rgba(0,0,0,.45) !important; /* corrige !; */
+}
+
+/* 4) **Panel por fuera de la card** (sibling): flujo normal con altura animada */
+.carousel-contenedor article{
+  position: relative;           /* base para estados si los necesitás */
+  --panel-h: 240px;             /* altura máxima del panel al abrir (ajustable) */
+}
+.carousel-contenedor article > .reveal-panel{
+  /* aseguramos que NO sea absoluto (sobre-escribe reglas previas) */
+  position: static !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+
+  /* cerrado por defecto */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 .75rem;   /* solo horizontal cerrado */
+  margin: 0;
+
+  /* estilo del panel */
+  background: var(--surface);
+  color: var(--text);
+  border-top: 2px solid var(--primary);
+
+  transition:
+    max-height .35s ease,
+    opacity .25s ease,
+    padding .35s ease,
+    margin .35s ease;
+}
+
+/* Abrir panel en hover/focus del artículo (NO dentro de .card) */
+.carousel-contenedor article:hover > .reveal-panel,
+.carousel-contenedor article:focus-within > .reveal-panel{
+  max-height: var(--panel-h);
+  opacity: 1;
+  padding: .6rem .75rem .8rem;
+  margin-top: .35rem;           /* separa de la card */
+}
+
+/* 5) Corrige selector mal escrito para focus-within (por si aplica) */
+.carousel-contenedor .card:focus-within + .reveal-panel{
+  max-height: var(--panel-h);
+  opacity: 1;
+  padding: .6rem .75rem .8rem;
+  margin-top: .35rem;
+}
+
+/* 6) Botón icono (general) */
+.btn-icon{
+  width:28px; height:28px;
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:0; border-radius:50%;
+}
+.btn-icon i{ font-size:14px; line-height:1; }

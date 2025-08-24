@@ -1,105 +1,60 @@
 /* ====== Base ====== */
-.container{ height:auto; }
+.container{ height: auto ; }
 
 /* ====== Carrusel ====== */
-.carousel-wrap{
+.carousel-contenedor{
   position:relative;
   container-type:inline-size;
 }
 
 /* Tira horizontal (mobile-first) */
-.carousel-strip{
+.contenedor-cards{
   display:flex;
   flex-wrap:nowrap;
   gap:.75rem;
-  padding:.5rem .5rem 2.5rem;       /* espacio para flechas */
+  padding:.5rem .5rem 2.5rem;       /* espacio inferior para no cortar sombras */
   overflow-x:auto;
   overflow-y:hidden;
   scroll-behavior:smooth;
   -ms-overflow-style:none;           /* IE/Edge antiguo */
   scrollbar-width:none;              /* Firefox */
 }
-.carousel-strip::-webkit-scrollbar{  /* Chrome/Safari/Edge */
-  display:none;
-}
+.contenedor-cards::-webkit-scrollbar{ display:none; } /* Chrome/Safari/Edge */
 
-/* Card del carrusel (scoped, no global) */
-.carousel-card{
+/* Card del carrusel */
+.carousel-contenedor .card{
+  position:relative;
+  overflow:hidden;                         /* recorta cualquier desborde */
   width:clamp(200px, 68vw, 260px);
   min-width:clamp(200px, 68vw, 260px);
-  border-radius:10px;
-  border:1px solid #ddd;
-  box-shadow:0 0 10px rgba(0,0,0,.1);
-  transition:transform .2s ease-in-out;
-}
-.carousel-card:hover{ transform:translateY(-2px); }
-
-/* Imagen dentro de .ratio (scoped) */
-.carousel-card .ratio > img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+  transition:transform .2s ease, box-shadow .2s ease;
 }
 
-/* Título compacto */
-.carousel-card .card-body{ padding:.5rem .75rem; }
 
-/* ====== Flechas (se mantienen) ====== */
-.controls{
-  pointer-events:none;
-  position:absolute;
-  inset:0;
-  z-index:3; /* asegura que queden por encima del carrusel */
-}
-.ctrl-pair{ display:none; pointer-events:none; }
-
-.arrow{
-  pointer-events:auto;
-  position:absolute;
-  top:50%;
-  translate:0 -50%;
-  display:grid;
-  place-items:center;
-  width:42px; height:42px;
-  border-radius:999px;
-  text-decoration:none;
-  font-size:1.4rem;
-  border:1px solid transparent;
-  transition:transform .5s ease, box-shadow .5s ease, opacity .5s ease;
-}
-.arrow.prev{ left:.25rem; }
-.arrow.next{ right:.25rem; }
-.arrow:active{ transform:translateY(0) scale(.98); }
-.arrow i{ line-height:1; }
 
 /* ====== Modal (vídeo) ====== */
 .modal-dialog{ max-width:min(1000px, 96vw); }
 
-/* Si usas el figure con altura completa, suaviza en móviles */
+/* Full-height figure suavizado en móviles */
 .div-figure{ position:relative; width:100%; height:100dvh; overflow:hidden; border-radius:15px; }
 .youtube{ display:block; transform:translateY(-1px); height:calc(100% + 2px); }
 
 /* ====== Breakpoints ====== */
 
-/* XS–SM: ajustes móviles */
+/* XS–SM: móviles */
 @media (max-width: 576px){
-  .carousel-card{ width:70vw; min-width: 70vw; }
-  .carousel-card .card-body{ padding:.5rem; }
-  /* Flechas un poco más chicas si lo deseas (opcional)
-  .arrow{ width:38px; height:38px; font-size:1.25rem; }
-  */
-  /* Vídeo dentro del modal sin hacks de altura */
+  .carousel-contenedor .card{ width:70vw; min-width:70vw; }
+  .card .card-body{ padding:.5rem; }
   .div-figure{ height:auto; }
   .youtube{ height:auto; transform:none; }
 }
 
-/* MD: cards más compactas y fijas */
+/* MD */
 @media (min-width: 576px){
-  .carousel-card{ width:240px; min-width:240px; }
+  .carousel-contenedor .card{ width:240px; min-width:240px; }
 }
 
-/* LG+: tamaño final */
+/* LG+ */
 @media (min-width: 768px){
-  .carousel-card{ width:260px; min-width:260px; }
+  .carousel-contenedor .card{ width:260px; min-width:260px; }
 }
