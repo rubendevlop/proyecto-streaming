@@ -1,35 +1,4 @@
-:root {
-  /* Core – Coraje / */
-  --courage-100: #f7d8e9;
-  --courage-300: #f19fcd;
-  /*  Primary  */
-  --courage-500: #e36cb4;
-  --courage-600: #cc579e;
-  --courage-700: #b94c8e;
 
-  /*  Neutros  */
-  --ink-900: #0f0c10;
-  --ink-700: #2b2330;
-  --ink-400: #6e6171;
-  --cloud-50: #f7f5f8;
-
-  /*  Accentos  */
-  --muriel-yellow: #f2d24b;
-  --nowhere-green: #8ea85c;
-  --barn-brown: #7e3f2f;
-  --night-purple: #3d2a4e;
-  --ghost-teal: #79bfc5;
-
-  /* Tokens de UI  */
-  --bg: var(--ink-900);
-  --surface: #16131a;
-  --text: #edeaf0;
-  --muted: #a89cb0;
-  --primary: var(--courage-500);
-  /*  texto sobre rosa claro */
-  --primary-contrast: #160e15;
-  --border: rgba(255, 255, 255, 0.08);
-}
 
 body{
   background-color: #2b2330;
@@ -74,7 +43,7 @@ body{
 .btn-suricata2{
   background-color: var(--night-purple);   
   color: #fff;                 
-  padding: 0.75rem 1.5rem;     /
+  padding: 0.75rem 1.5rem;
   border: none;                
   border-radius: 0.5rem;       
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -84,3 +53,18 @@ body{
   background-color: var(--ink-700);   
   transform: scale(1.05);      
 }
+
+
+/* modal del principio */
+
+.modalprincipal{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 50rem;
+}
+
+
+
