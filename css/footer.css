@@ -3,7 +3,7 @@
  min-height: 65vh;
 }
 .pruebafooter{
- background-color: var(--bg) ;
+ background-color: var(--surface) ;
 }
 .contenedorfoot {
         display: flex;
