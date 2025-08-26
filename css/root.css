@@ -1,0 +1,17 @@
+:root {
+  /* Fondo y superficies  /
+  --bg: #0F0C10;      / Fondo principal (negro violeta)/
+  --surface: #16131A;   / Secciones y tarjetas /
+
+  / Texto /
+  --text: #EDEAF0;      / Texto principal /
+  --muted: #A89CB0;     / Texto secundario /
+
+  / Colores de marca /
+  --primary: #E36CB4;   / Botones y acentos rosas /
+  --primary-hover: #CC579E; / Hover de botones /
+  --logo: #F2D24B;      / Amarillo del logo Suricata /
+
+  / Bordes*/
+  --border: rgba(255,255,255,0.08);
+}
