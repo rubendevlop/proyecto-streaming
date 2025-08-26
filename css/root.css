@@ -1,4 +1,5 @@
 :root {
+ 
     /* Fondo y superficies */
     --bg: #0F0C10;        /* Fondo principal (negro violeta) */
     --surface: #16131A;   /* Secciones y tarjetas */
@@ -15,3 +16,4 @@
     /* Bordes */
     --border: rgba(255,255,255,0.08);
   }
+
