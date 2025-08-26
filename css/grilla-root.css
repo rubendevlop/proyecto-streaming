@@ -249,11 +249,29 @@ h1, h2, h3, .modal-title {
 @media (max-width: 576px){
   .modal-75w { max-width: 96vw; }
   .arrow { display: none;}
+  .card {
+    max-width: 4rem;
+  }
+  .card .ratio > img {
+    width: 100% !important;
+    height: 8rem !important;  
+    display: block;
+    border-bottom: 3px solid var(--primary) !important;
+  }
 }
 
-@media (max-width: 800px){
+@media (max-width: 992px){
   
   .arrow { display: none;}
+  .card {
+    width: 7rem;
+  }
+  .card .ratio > img {
+    width: 100% !important;
+    height: 8rem !important;  
+    display: block;
+    border-bottom: 3px solid var(--primary) !important;
+  }
 }
 
 
