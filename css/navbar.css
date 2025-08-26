@@ -1,0 +1,57 @@
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-hover);
+  }
+  
+  .navbar {
+    background-color: var(--surface);
+  }
+  
+  .navbar-brand {
+    color: var(--logo);
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-brand:hover {
+    color: var(--primary);
+  }
+  
+  .nav-link {
+    color: var(--text) !important;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary) !important;
+  }
+  
+  /* 🔽 Dropdown personalizado */
+  .dropdown-menu {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+  
+  .dropdown-item {
+    color: var(--text);
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--primary);
+    color: var(--primary-contrast, #160E15); /* contraste sobre rosa */
+  }
+  
+  @media (max-width: 600px){
+    .search-nav{
+      margin-bottom: 15px !important;
+    }
+  }
+  
+  .logo{
+    width: 70px;
+    height: auto;
+  }
