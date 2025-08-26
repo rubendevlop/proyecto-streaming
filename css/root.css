@@ -1,27 +1,17 @@
 :root {
-  /*  Colores base */
-  --bg: #0F0C10;          /* Fondo principal */
-  --surface: #16131A;      /* Fondos de secciones, cards */
-  --border: rgba(255,255,255,0.08);
-
-  /*  Paleta principal */
-  --primary: #E36CB4;        /* Botones y acentos */
-  --primary-hover: #CC579E;   /* Hover primario */
-  --primary-contrast: #160E15; /* Texto sobre primary */
-
-  /*  Texto */
-  --text: #EDEAF0;         /*  Texto principal  */
-  --muted: #A89CB0;        /*  Texto secundario */ 
-  --ink-400: #6E6171;      /*  Gris intermedio  */
-
-  /*  Acentos */
-  --accent-yellow: #F2D24B;   /*  Amarillo (puede usarse en logo o destacados)  */
-  --accent-green: #8EA85C;    /*  Verde opcional  */
-  --accent-brown: #7E3F2F;     /* Marrón opcional  */
-  --accent-purple: #3D2A4E;   /*  Púrpura profundo  */
-  --accent-teal: #79BFC5;     /* Teal suave  */
-
-   /* 🌫️ Neutros  */
-  --ink-700: #2B2330;
-  --cloud-50: #F7F5F8;
-}
+    /* Fondo y superficies */
+    --bg: #0F0C10;        /* Fondo principal (negro violeta) */
+    --surface: #16131A;   /* Secciones y tarjetas */
+  
+    /* Texto */
+    --text: #EDEAF0;      /* Texto principal */
+    --muted: #A89CB0;     /* Texto secundario */
+  
+    /* Colores de marca */
+    --primary: #E36CB4;   /* Botones y acentos rosas */
+    --primary-hover: #CC579E; /* Hover de botones */
+    --logo: #F2D24B;      /* Amarillo del logo Suricata */
+  
+    /* Bordes */
+    --border: rgba(255,255,255,0.08);
+  }
