@@ -10,8 +10,8 @@ body {
   
 }
 .card{
-background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0)), #15122a;
-border:1px solid #2a2550;
+background: var(--degradados-cards);
+border:1px solid var(--border-2);
 border-radius: 18px;
 padding: 20px;
 box-shadow: 0 10px 30px rgba(0,0,0,.35);
@@ -31,8 +31,8 @@ justify-items: center;
   justify-content: center;
   align-items: center;
   padding: 40px;
-  background-color: #0F0C10;
-  color: white;
+  background-color: var(--bg);
+  color: var(--text);
   width: 100%;
   max-width: 100%;
   
@@ -62,7 +62,7 @@ label {
 
 input[type="text"], input[type="email"] {
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--text);
   border-radius: 6px;
 }
 
@@ -71,7 +71,7 @@ input[type="text"], input[type="email"] {
 }
 
 button {
-  background-color:#ff2670 ;
+  background-color:var(--secondary) ;
   border: none;
   padding: 12px;
   color: black;
@@ -81,8 +81,8 @@ button {
 }
 
 button:hover {
-  background: #ff4b8a;
-  box-shadow: 0 8px 24px rgba(255, 75, 138, .4);
+  background: var(--secondary-hover);
+  box-shadow: 0 8px 24px var(--secondary-hover-2);
   /* background-color: #CC579E; */
 }
 
@@ -91,7 +91,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0F0C10;
+  background-color: var(--bg);
 }
 
 .image-section img {
@@ -99,7 +99,7 @@ button:hover {
   max-width: 450px;
 }
 footer{
-    background-color: #090017;
+    background-color: var(--bg-s);
 }
 footer img{
     width: 80px;
