@@ -1,0 +1,37 @@
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  }
+
+  .error-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 18px 48px rgba(0,0,0,.55);
+    padding: clamp(1rem, 3vw, 2rem);
+  }
+
+  .error-title {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  }
+
+  .error-lead {
+    color: var(--muted);
+  }
+
+  .btn-primary {
+    --bs-btn-bg: var(--primary);
+    --bs-btn-border-color: var(--primary);
+    --bs-btn-hover-bg: var(--primary-hover);
+    --bs-btn-hover-border-color: var(--primary-hover);
+    --bs-btn-color: #fff;
+  }
+
+  .suricata-img {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 18px 26px rgba(0,0,0,.55));
+  }
