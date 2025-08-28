@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #15122a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* ocupa toda la pantalla */
+  text-align: center;
+  background-image: url("../assets/ChatGPT\ Image\ 24\ ago\ 2025\,\ 09_30_52\ p.m..png");
+  background-size: 1200px;      /* cubre toda la pantalla */
+  background-repeat: no-repeat; /* no se repite */
+  background-attachment: fixed; /* se mantiene fija al hacer scroll */
+  background-position: bottom; 
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+title {
+  grid-column: 1 / span 3; 
+  text-align: center;
+  margin-bottom: 20px;
+}
+p{
+  color: rgb(252, 252, 252);
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-items: center; 
+  align-items: center;
+
+}
+
+
+
+.card {
+  background-color: transparent;
+  border: none;
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+  align-items: center;
+  min-width: 170px;
+  min-height: 170px;
+}
+
+.card img {
+  width: 100px;        /* tamaño uniforme */
+  height: 100px;       /* mantiene forma cuadrada */
+  object-fit: cover;   /* recorta para que no se deforme */
+  border-radius: 50%;  /* hace la imagen circular */
+  border: 2px solid #E36CB4; /* opcional: borde blanco para resaltar */
+  margin-bottom: 10px; /
+}
+/* Mantiene el siguiente orden */
+.card1 { grid-column: 2; grid-row: 1; } 
+.card2 { grid-column: 4; grid-row: 1; } 
+.card3 { grid-column: 1; grid-row: 2; } 
+.card4 { grid-column: 3; grid-row: 2; } 
+.card5 { grid-column: 5; grid-row: 2; } 
+
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .card {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    background-color: #2a2550;
+  }
+  .card img{
+    border:solid white;
+  }
+  
+}
