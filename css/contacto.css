@@ -69,6 +69,7 @@ body {
  main {
         padding-top: 100px;
       }
+      
 
       /* Sección de encabezado del contacto */
       .contact-header {
@@ -77,6 +78,10 @@ body {
 
       .titulocontacto {
         margin-bottom: 1rem;
+      }
+      .contenedor-form1{
+        height: 100%;
+        padding-bottom: 15px;
       }
 
       /* Secciones con gaps */
