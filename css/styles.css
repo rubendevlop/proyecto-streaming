@@ -15,7 +15,7 @@ body{
 
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
-  background-color: #f19fcd;
+  background-color: var(--primary);
   border-radius: 50%;
   height: 50px;
   width: 50px;
@@ -53,18 +53,4 @@ body{
   background-color: var(--ink-700);   
   transform: scale(1.05);      
 }
-
-
-/* modal del principio */
-
-.modalprincipal{
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40rem;
-  height: 50rem;
-}
-
-
 

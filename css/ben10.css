@@ -5,20 +5,47 @@
 }
 
 main{
+    position: relative;
+    width: 100vw;
     height: 99.60vh;
+    overflow: hidden;
 }
 
 body{
-    background-color: #2b2330;
+    background-color: black;
 }
 
-/* prueba de capitulo pausa  */
+.negroprin3{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    right: 1865px;
+}
 
-.player-container {
-  position: relative;
-  width: 100vw;
-  height: 99.6vh;
-  overflow: hidden;
+.negroprin4{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    left: 1800px;
+}
+
+.negroprin2{
+    width: 2000px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: -95px;
+}
+
+.negroprin{
+    width: 80px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    top: 880px;
+    right: 50px;
 }
 
 iframe {
@@ -27,36 +54,7 @@ iframe {
   border: none;
 }
 
-.pause-btn {
-  position: absolute;
-  top: 5rem;
-  right: 50rem;
-  font-size: 2rem;
-  z-index: 10;
-  cursor: pointer;
-  color: white;
-  background: rgba(0,0,0,0.5);
-  padding: .5rem 1rem;
-  border-radius: 5px;
-}
 
-/* Overlay oculto por defecto */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
-}
 
-/* Mostrar overlay cuando el checkbox está marcado */
-#togglePause:checked ~ .overlay {
-  opacity: 1;
-  pointer-events: all;
-}
+
+
