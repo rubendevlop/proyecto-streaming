@@ -6,7 +6,7 @@
 }
 
 main{
-    padding-top: 10rem !important;
+    padding-top: 5rem !important;
 }
 
 
@@ -64,4 +64,35 @@ body{
   background-color: var(--ink-700);   
   transform: scale(1.05);      
 }
+
+.carousel-link{
+  pointer-events: auto;
+}
+
+.carousel-link2{
+  pointer-events: auto;
+}
+
+.carousel-link3{
+  pointer-events: auto;
+}
+
+
+
+  @media (min-width: 600px){
+  .carousel-link {
+    pointer-events: none;
+    cursor: default;
+    }
+
+    .carousel-link2 {
+    pointer-events: none;
+    cursor: default;
+    }
+
+    .carousel-link3 {
+    pointer-events: none;
+    cursor: default;
+    }
+  }
 
