@@ -27,7 +27,7 @@ h1 { color: var(--primary); }
 .gallery-card.ratio > img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:fill;
   display: block;
   border-bottom: 3px solid var(--primary);
 }
@@ -73,6 +73,7 @@ h1 { color: var(--primary); }
   opacity: 1;
   padding: .75rem .9rem .9rem;
   box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  width: 100%;
 }
 
 /* ====== Contenido interno (orden vertical) ====== */
