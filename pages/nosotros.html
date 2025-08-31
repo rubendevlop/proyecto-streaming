@@ -1,16 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
-    <link rel="stylesheet" href="../css/nosotros.css">
+    
+    
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+   
     <link rel="stylesheet" href="../css/root.css">
+     <link rel="stylesheet" href="../css/nosotros.css">
+     <link rel="stylesheet" href="../css/nosotros.css">
+     <title>Acerca de nosotros</title>
 </head>
 <body>
-    <header>
+
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg px-3">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="../index.html" target="_blank"><img src="../assets/logo-suricata-tv-modf.png" alt="" class="logo "></a>
     
+          <!-- Botón responsive -->
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Links -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html" target="_blank">Inicio</a>
+              </li>
+              <!-- Categorías con submenú -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                  <li><a class="dropdown-item" href="../pages/comedia.html" target="_blank">Comedia</a></li>
+                  <li><a class="dropdown-item" href="../pages/accion.html" target="_blank">Acción / Superhéroes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./suscripciones.html" target="_blank">Suscripciones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nosotros" target="_blank">Acerca de nosotros</a>
+              </li>
+              
+            </ul>
+    
+            <!-- Buscador -->
+            <form class="d-flex me-2" role="search">
+              <input class="form-control me-2 search-nav" type="search" placeholder="Buscar" aria-label="Buscar">
+              <button class="btn btn-primary search-nav" type="submit">Buscar</button>
+            </form>
+    
+            <!-- Botones -->
+            <a href="#" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#modalLogin">Login</a>
+            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro">Register</a>
+          </div>
+        </div>
+      </nav>
     </header>
+  
+    <!-- ===== Modal Login ===== -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="tituloLogin" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloLogin">Iniciar sesión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="post">
+              <div class="mb-3">
+                <label for="loginCorreo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="loginCorreo" placeholder="nombre@correo.com" required>
+              </div>
+              <div class="mb-2">
+                <label for="loginClave" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="loginClave" placeholder="••••••••" required>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="recordarme">
+                  <label class="form-check-label" for="recordarme">Recordarme</label>
+                </div>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <span>¿No tenés cuenta?</span>
+            <button class="btn btn-outline-light" data-bs-target="#modalRegistro" data-bs-toggle="modal" data-bs-dismiss="modal">Crear cuenta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- ===== Modal Registro ===== -->
+    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="tituloRegistro" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tituloRegistro">Crear cuenta</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <form action="#" method="post">
+              <div class="mb-3">
+                <label for="regNombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="regNombre" placeholder="Tu nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="regCorreo" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="regCorreo" placeholder="nombre@correo.com" required>
+              </div>
+              <div class="mb-2">
+                <label for="regClave" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="regClave" placeholder="Mínimo 8 caracteres" minlength="8" required>
+              </div>
+              <div class="mb-3">
+                <label for="regClave2" class="form-label">Repetir contraseña</label>
+                <input type="password" class="form-control" id="regClave2" placeholder="Repetí tu contraseña" minlength="8" required>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="aceptoTerminos" required>
+                <label class="form-check-label" for="aceptoTerminos">Acepto los términos y condiciones</label>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
+            </form>
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <span>¿Ya tenés cuenta?</span>
+            <button class="btn btn-outline-light" data-bs-target="#modalLogin" data-bs-toggle="modal" data-bs-dismiss="modal">Iniciar sesión</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
     <main>
         <div class="container">
             <div class="title">
@@ -18,70 +160,113 @@
     
                 <p>Conoce al equipo detras de SuricataTV.</p>
                 
-                 <p>En suricasta tv somos un equipo apasionado por el entretenimiento,
-                
-                con la mision de ofrecerte canales gratuitos bajo demanda con todos los clasicos de tu infancia .
-                
-                Creemos en la accesibilidad , la innovacion y el contenido de calidad</p>
+              <p>En suricasta tv somos un equipo apasionado por el entretenimiento, con la mision de ofrecerte canales gratuitos bajo demanda con todos los clasicos de tu infancia. Creemos en la accesibilidad, la innovacion y el contenido de calidad</p>
                 
             </div>
            
             <div class="grid">
 
-                <div class="card card1">
+                <div class="_card card1">
                 <div class="avatar" style="background-image: url(../assets/Bautista\ Bornemann.jpg);"></div>
                 <h2>Bautista Bornemann </h2>
                 <h3>Diseñador/Desarrollador web</h3>
                 <br>
                 <b>Encargado de :</b>
-                <p> Footer y contacto</p>
+                <p>Desarrollo de Footer y contacto</p>
                 </div>
 
-                <div class="card card2">
+                <div class="_card card2">
                     <div class="avatar" style="background-image: url(../assets/Lisandro\ Garcia.jpg);"></div>
                     <h2>Lisandro Garcia</h2>
                     <h3>DIseñador/Desarrollador web</h3>
                     <br>
                     <b>Encargado de :</b>                    
-                    <p>Error 404</p>
+                    <p>Desarrollo de Error 404</p>
                 </div>
                 
-                <div class="card card3">
+                <div class="_card card3">
                     <div class="avatar" style="background-image: url(../assets/Ezequiel.jpg);"></div>
                     <h2>Ezequiel Royer</h2>
                     <h3>Diseñador/Desarrollador web</h3>
                     <br>
                     <b>Encargado de :</b>
-                    <p>Suscripcion ,
-                      formulario de suscripcion ,
-                    sobre nosotros.
+                    <p>Desarrollo de Suscripcion, formulario de suscripcion y acerca de nosotros.
                     </p>
                 </div>
                 
 
-                <div class="card card4">
+                <div class="_card card4">
                     <div class="avatar" style="background-image: url(../assets/Matias\ Pelegrina.jpg);"></div>
                     <h2>Matias Pelegrina</h2>
                     <h3>Diseñador/Desarrollador web</h3>
                     <br>
                     <b>Encargado de :</b>
-                    <p>Corrousel , botones</p>
+                    <p>Desarrollo parte de pagina principal creando y Corrousel de imagene con botones</p>
                 </div>
                 
-                <div class="card card5">
+                <div class="_card card5">
                     <div class="avatar" style="background-image: url(../assets/Ruben\ Lopez.jpg);"></div>
                     <h2>Ruben Lopez</h2>
                     <h3>Scrum Master</h3>
                     <h3>Diseñador/Desarrollador web</h3>
                     <br>
                     <b>Encargado de :</b>
-                    <p>Navbar , paginas de categorias</p>
+                    <p>Desarrollo de Navbar, galeria overflow-x con arrows y paginas de categorias</p>
                 </div>
             </div>
 
         </div>
     </main>
-    <footer></footer>
+
+
+    <footer role="contentinfo" class="pt-5 pruebafooter">
+    <section class="container">
+     <div class="row gy-4" aria-labelledby="ft-brand">
+     <div class="col-12 col-lg-4 text-center py-0"> 
+      
+        <img src="../assets/logo-suricata-tv-modf.png" alt="suricata TV" class="footerimg">
+        
+      <p class="text-secondary small mb-2">Canales lineales gratuitos y clásicos bajo demanda.</p>
+          <nav aria-label="Redes sociales">
+            <ul class="list-inline m-0">
+              <li class="list-inline-item"><a href="#" class="link-soft footerlinks" data-bs-toggle="modal" data-bs-target="#modalSocial"><i class="bi bi-instagram fs-5"></i><span class="visually-hidden">Instagram</span></a></li>
+              <li class="list-inline-item"><a href="#" class="link-soft footerlinks" data-bs-toggle="modal" data-bs-target="#modalSocial"><i class="bi bi-youtube fs-5"></i><span class="visually-hidden">YouTube</span></a></li>
+              <li class="list-inline-item"><a href="#" class="link-soft footerlinks" data-bs-toggle="modal" data-bs-target="#modalSocial"><i class="bi bi-facebook fs-5"></i><span class="visually-hidden">Facebook</span></a></li>
+            </ul>
+          </nav>
+     </div>
+     <div class="col-12 col-md-6 col-lg-4 text-center" aria-labelledby="ft-explorar">
+        <nav>
+          <h3 id="ft-explorar" class="h6 titulosfoot">Explorar</h3>
+          <ul class="list-unstyled">
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalNav">En vivo</a></li>
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalNav">Películas</a></li>
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalNav">Series</a></li>
+          </ul>
+        </nav>
+     </div>
+     <div class="col-12 col-md-6 col-lg-4 text-center" aria-labelledby="ft-soporte">
+      <nav>
+          <h3 id="ft-soporte" class="h6 titulosfoot">Soporte</h3>
+          <ul class="list-unstyled">
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalAbout">Acerca</a></li>
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalContact">Contacto</a></li>
+            <li><a class="link-soft footerlinks" href="#" data-bs-toggle="modal" data-bs-target="#modalTerms">Términos</a></li>
+          </ul>
+        </nav>
+     </div>
+    </div>
+    </section>
+    <section class="container">
+     <div class="row">
+      <div class="col-12 text-center">
+       <p class="text-white">&copy; Suricata TV - 2025 Todos los derechos reservados.</p>
+      </div>
+     </div>
+    </section>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     
 </body>
 </html>

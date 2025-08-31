@@ -18,7 +18,7 @@ main {
   height: 100%;
   padding: 10px;
   box-sizing: border-box;
-
+  margin-top: 5rem;
 }
 
 
@@ -45,7 +45,7 @@ main {
  }
 
  
- .card {
+ ._card {
   background: #1d1934;
   border-radius: 20px;
   padding: 20px;
@@ -70,18 +70,20 @@ main {
   background-repeat: no-repeat;
   border: 5px solid #E36CB4;
  }
- .card h2 {
+ ._card h2 {
   margin: 5px 0;
   font-size: 1.2rem;
  }
- .card h3{
-  color: #8e8eff;
-  margin: 5px 0;
+ ._card h3{
+  color: #8e8eff !important;
+  margin: auto !important;
+  width: 100% !important;
+  font-size: 1.2rem !important;
   
  }
  
 
- .card p {
+ ._card p {
   font-size: 0.9rem;
   color: #d3d3d3;
  }
