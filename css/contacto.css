@@ -1,0 +1,191 @@
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+}
+.btn-primary {
+  background-color: var(--primary);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+
+.navbar {
+  background-color: var(--surface);
+}
+
+.navbar-brand {
+  color: var(--logo);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.navbar-brand:hover {
+  color: var(--primary);
+}
+
+.nav-link {
+  color: var(--text) !important;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+@media (max-width: 400px){
+  .search-nav{
+    margin-bottom: 15px !important;
+  }
+}
+
+.logo{
+  width: 70px;
+  height: auto;
+}
+.titulocontacto{
+  color: var(--text);
+  margin-top: 30px;
+}
+.subtitulocontacto{
+  color: var(--text);
+}
+.backgroundsecciones{
+  background-color: var(--surface);
+}
+.iconosinfo{
+  color: var(--cloud-50);
+  text-decoration: none;
+}
+.iconosinformacion:hover{
+  color: var(--primary);
+}
+.textoinfo{
+  color: var(--text);
+}
+ main {
+        padding-top: 100px;
+      }
+      
+
+      /* Sección de encabezado del contacto */
+      .contact-header {
+        margin-bottom: 3rem;
+      }
+
+      .titulocontacto {
+        margin-bottom: 1rem;
+      }
+      .contenedor-form1{
+        height: 100%;
+        padding-bottom: 15px;
+      }
+
+      /* Secciones con gaps */
+      .backgroundsecciones {
+        margin-bottom: 2rem; /* Gap entre secciones */
+      }
+
+      /* Formulario */
+      .form-section {
+        margin-bottom: 3rem; /* Gap específico para la sección del formulario */
+      }
+
+      /* Sección de información */
+      .info-section {
+        margin-bottom: 3rem; /* Gap específico para la sección de información */
+      }
+
+      .card {
+        margin-bottom: 2rem; /* Gap entre cards */
+      }
+
+      /* FAQ Section */
+      .faq-section {
+        margin-bottom: 3rem; /* Gap específico para la sección FAQ */
+      }
+
+      .accordion-item {
+        margin-bottom: 1rem;
+      }
+
+     .backgroundacordion{
+      background-color: var(--surface);
+      color: var(--primary-hover);
+     }
+     .botonacordion{
+      background-color: var(--bg);
+      color: var(--primary);
+     }
+     .textacordion{
+      color: var(--accent-teal);
+     }
+      /* Responsividad */
+      @media (max-width: 768px) {
+        .backgroundsecciones {
+          margin-bottom: 1.5rem; /* Gap reducido en móviles */
+        }
+
+        .form-section,
+        .info-section,
+        .faq-section {
+          margin-bottom: 2rem; /* Gaps reducidos en móviles */
+        }
+.pruebafooter{
+ background-color: var(--bg) ;
+}
+.contenedorfoot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 1rem;
+      }
+
+.titulosfoot {
+  margin: 0; 
+  font-size: 1.5rem; 
+  line-height: 1.2;
+  color: #ffffff; 
+}
+.footerimg{
+  width: 50px;
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .footerimg {
+    width: 15%;
+  }
+  
+  .titulosfoot {
+    font-size: 1.3rem;
+  }
+  
+  .contenedorfoot {
+    gap: 10px;
+  }
+}
+      
+      .titulosfoot {
+        margin: 0;
+        color: var(--primary);
+      }
+      
+   .footerlinks{
+    text-decoration: none;
+    color: var(--text);
+   }
+      
+      .footerlinks:hover {
+        color: var(--primary);
+      }
+}
+@media (max-width: 576px){
+  .footerimg{
+    width: 30%;
+  }
+}

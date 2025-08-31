@@ -1,0 +1,98 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    padding-top: 5rem !important;
+}
+
+
+
+body{
+  background-color: #2b2330;
+}
+/* carousel  */
+.carousel-principal {
+ border-radius: 20px;
+}
+
+.carousel-item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: var(--primary);
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 15px;
+  background-size: 60% 60%;
+}
+
+
+/* boton personalizado  */
+
+.btn-suricata {
+  background-color: #e6007e;   
+  color: #fff;                
+  padding: 0.75rem 1.5rem;    
+  border: none;                
+  border-radius: 0.5rem;       
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-suricata:hover {
+  background-color: #b30061;   
+  transform: scale(1.05);     
+}
+
+.btn-suricata2{
+  background-color: var(--night-purple);   
+  color: #fff;                 
+  padding: 0.75rem 1.5rem;
+  border: none;                
+  border-radius: 0.5rem;       
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-suricata2:hover {
+  background-color: var(--ink-700);   
+  transform: scale(1.05);      
+}
+
+.carousel-link{
+  pointer-events: auto;
+}
+
+.carousel-link2{
+  pointer-events: auto;
+}
+
+.carousel-link3{
+  pointer-events: auto;
+}
+
+
+
+  @media (min-width: 600px){
+  .carousel-link {
+    pointer-events: none;
+    cursor: default;
+    }
+
+    .carousel-link2 {
+    pointer-events: none;
+    cursor: default;
+    }
+
+    .carousel-link3 {
+    pointer-events: none;
+    cursor: default;
+    }
+  }
+

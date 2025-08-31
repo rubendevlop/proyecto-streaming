@@ -1,0 +1,31 @@
+:root { 
+    /* Fondo y superficies */
+    --bg: #0F0C10;        /* Fondo principal (negro violeta) */
+    --bg-s: #211927;        /* Fondo principal (negro violeta) */
+    --surface: #16131A;   /* Secciones y tarjetas */
+  
+    /* Texto */
+    --text: #EDEAF0;      /* Texto principal */
+    --muted: #A89CB0;     /* Texto secundario */
+    --text-2: #b4b1c7; /* texto principal 2*/
+  
+    /* Colores de marca */
+    --primary: #E36CB4;   /* Botones y acentos rosas */
+    --secondary: #ff2670; /*botones y acentos rosa oscuro*/
+    --secondary-hover: #ff4b8a; /*hover para botones rosa*/
+    --secondary-hover-2: #e0427a; /*hover para botones rosa*/
+    --primary-hover: #CC579E; /* Hover de botones */
+    --logo: #F2D24B;      /* Amarillo del logo Suricata */
+    --ul: #2dd4bf; /*color para los puntos de una lista*/
+    --ul-2: rgba(45,212,191,.15); /*color sombra en listas*/
+  
+    /* Bordes */
+    --border: rgba(255,255,255,0.08);
+    --border-2: #2a2550 ;
+
+    --degradados: radial-gradient(1200px 600px at 20% 0%, #1a1640 0%, transparent 60%),
+    radial-gradient(1000px 600px at 90% 10%, #24194f 0%, transparent 60%),
+    radial-gradient(1200px 700px at 50% 120%, #120f2a 0%, transparent 60%),
+    #0b0a1d; /* bg html-body*/
+    --degradados-cards: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.0)), #15122a;  /* fondo cards*/
+  }

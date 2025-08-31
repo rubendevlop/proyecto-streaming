@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  margin-top: 40px;
+}
+html, body {
+  height: 100%;
+  font-family: "Inter", sans-serif;
+  background: var(--degradados);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+
+.grid-container {
+  display: grid;
+  gap: 20px;
+  grid-template-areas:
+    "header header header"
+    "main1 main2 main3"
+    "sidebar sidebar sidebar"
+    "footer1 footer2 footer3";
+  padding: 40px;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  margin-bottom: 20px;
+  
+}
+
+.header h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.header h2 {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--text-2);
+}
+
+/* CARDS */
+.card{
+background: var(--degradados-cards);
+border:1px solid var(--border-2);
+border-radius: 18px;
+padding: 28px;
+box-shadow: 0 10px 30px rgba(0,0,0,.35);
+transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+text-align: center;
+}
+
+.card:hover {
+  transform :translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.45);
+  border-color:var(--border-2);
+}
+
+.card h2{
+  font-size: 22px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.card ul{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.card ul li{
+  margin: 10px 0;
+  position: relative;
+  padding-left: 18px;
+  text-align: left;
+}
+
+.card ul li::before {
+  content:"";
+  width: 8px;
+  height: 8px;
+  background: var(--ul);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  box-shadow: 0 0 0 3px var(--ul-2);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background-color: var(--secondary);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background .2s, box-shadow .2s;
+}
+.mt-btn{
+  margin-top: 2.3rem;
+}
+
+.btn:hover {
+  background: var(--secondary-hover);
+  box-shadow: 0 8px 24px rgba(255, 75, 138, .4);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  text-align: center;
+  color: var(--text)
+}
+.sidebar h3 {
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+
+
+/* reponsive */
+@media (max-width: 980px) {
+  .grid-container{
+    grid-template-areas: 
+    "header"
+    "main1"
+    "main2"
+    "main3"
+    "sidebar"
+    "footer1"
+    "footer2"
+    "footer3";
+    padding: 20px;
+  }
+}
+
+
