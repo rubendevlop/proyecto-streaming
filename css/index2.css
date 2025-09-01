@@ -95,4 +95,15 @@ body{
     cursor: default;
     }
   }
+  @media (max-width: 800px){
+    main{
+      margin-top: 2rem;
+    }
+    .media-max{
+      margin-top: 3rem;
+    }
+    .carousel-control-next-icon, .carousel-control-prev-icon{
+      display: none;
+    }
+  }
 
